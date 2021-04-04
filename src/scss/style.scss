@@ -3,6 +3,137 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding-top: 50px;
+  padding-bottom: 55px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 145px;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 35px;
+  }
+
+  &__link {
+    color: $moderate-blue;
+    @extend %rubik-500;
+    font-size: 15px;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__search-wrapper {
+    border-radius: 50%;
+    background-color: #edf1f4;
+    padding: 25px;
+    cursor: pointer;
+  }
+
+  &__link {
+    position: relative;
+    background-color: #fcd7b6;
+  }
+
+  &__heart-link {
+    border-right: 1px solid #fde7d3;
+    border-radius: 50px 0 0 50px;
+    margin-left: 18px;
+  }
+
+  &__cart-link {
+    border-radius: 0 50px 50px 0;
+  }
+
+  &__heart-link,
+  &__cart-link {
+    padding: 25px 45px;
+  }
+
+  &__apps-btn {
+    border-radius: 50%;
+    background-color: #a3bbc8;
+    padding: 25px;
+    margin-left: 18px;
+  }
+
+  &__search-wrapper::before,
+  &__link::before,
+  &__apps-btn::before {
+    content: '';
+    position: absolute;
+  }
+
+  &__link::before {
+    height: 17px;
+    bottom: 13px;
+  }
+
+  &__search-wrapper::before,
+  &__apps-btn::before {
+    transform: translate(-50%, -50%);
+  }
+
+  &__search-wrapper::before {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/icons/search.png');
+  }
+
+  &__apps-btn::before {
+    width: 20px;
+    height: 21px;
+    background-image: url('../images/icons/dots.png');
+  }
+
+  &__heart-link::before {
+    width: 18px;
+    right: 27px;
+    background-image: url('../images/icons/heart.png');
+  }
+
+  &__cart-link::before {
+    width: 19px;
+    left: 27px;
+    background-image: url('../images/icons/cart.png');
+  }
+
+  &__heart-count,
+  &__cart-count {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    @extend %dm-sans-400;
+    font-size: 10px;
+    line-height: 1.7;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    top: 10px;
+  }
+
+  &__heart-count {
+    right: 20px;
+  }
+
+  &__cart-count {
+    right: 33px;
+  }
+}
+
 
 
 @import 'media';

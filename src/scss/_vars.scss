@@ -1,0 +1,39 @@
+$primary-color: #243f4d; /* главный заголовок, цифры в правом верхнем углу, цифры на главное слайдере, название товара, описание товара */ 
+
+$moderate-blue: #436372; /* цвет пунктов меню, текст под главным заголовком, кнопка View more*/
+
+$color-3: #a3bbc8; /* цвет кнопки, цвет иконок под header, цена товара */
+$color-4: #414141; /* цвет текста рядом с иконками под header */
+$color-5: #585858; /* цвет текста рядом с иконками под header */
+$color-6: #191919; /* цвет заголовковб, активный пункт фильтра */
+$color-7: #8b8b8b; /* неактивный пункт фильтра */
+
+%poppins-700 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%rubik-400 {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
+  // font-weight: 500;
+}
+
+%dm-sans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dm-sans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dm-sans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
