@@ -7,9 +7,10 @@
   padding-top: 50px;
   padding-bottom: 55px;
 
-  &__wrapper {
+  &__menu {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 45px;
   }
 }
 
@@ -134,6 +135,49 @@
   }
 }
 
+.slider {
+  &__item {
+    padding-top: 220px;
+    padding-bottom: 285px;
+  }
+
+  &__content {
+    max-width: 415px;
+  }
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 0.93;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 57px;
+  }
+
+  &__link {
+    padding: 20px 100px 20px 25px;
+    background-color: $color-3;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      width: 23px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 17px;
+    }
+  }
+}
 
 
 @import 'media';
