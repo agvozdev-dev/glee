@@ -1,16 +1,21 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
+
 .header {
-  padding-top: 50px;
-  padding-bottom: 55px;
+  padding-top: 48px;
 
   &__menu {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 45px;
+    margin-bottom: 46px;
+  }
+
+  &__logo {
+    padding-top: 3px;
   }
 }
 
@@ -138,7 +143,9 @@
 .slider {
   &__item {
     padding-top: 220px;
-    padding-bottom: 285px;
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__content {
@@ -176,6 +183,90 @@
       transform: translateY(-50%);
       right: 17px;
     }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 45px;
+
+
+  li {
+    z-index: 1;
+    padding: 0 8px;
+
+    button {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #fde3cc;
+      @extend %rubik-500;
+      font-size: 11px;
+    }
+
+    &.slick-active {
+      button {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.feature {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fef7f0;
+    padding: 46px 0 37px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 265px;
+    margin: 0 auto;
+    padding-left: 60px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      left: -25px;
+    }
+
+    &--icon1::before {
+      background-image: url('../images/icons/support.svg');
+      width: 51px;
+      height: 53px;
+    }
+
+    &--icon2::before {
+      background-image: url('../images/icons/delivery.svg');
+      width: 54px;
+      height: 36px;
+    }
+
+    &--icon3::before {
+      background-image: url('../images/icons/payment.svg');
+      width: 54px;
+      height: 52px;
+    }
+  }
+
+  
+
+  &__heading {
+    font-size: 18px;
+  }
+
+  &__description {
+    @extend %dm-sans-400;
+    font-size: 16px;
+    line-height: 2;
   }
 }
 

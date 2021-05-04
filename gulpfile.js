@@ -39,6 +39,7 @@ function cleanDist() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'src/js/main.js'
   ])
     .pipe(concat('main.min.js'))
