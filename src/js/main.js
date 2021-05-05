@@ -1,8 +1,10 @@
 $(function () {
   $('.slider').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     fade: true,
     dots: true,
   });
+
+  mixitup('.products__images');
 })

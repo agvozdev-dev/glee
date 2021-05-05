@@ -4,6 +4,14 @@
 @import 'libs';
 @import 'global';
 
+.title {
+  font-size: 36px;
+  color: $color-6;
+  text-align: center;
+  padding-bottom: 27px;
+}
+
+
 
 .header {
   padding-top: 48px;
@@ -168,9 +176,12 @@
   }
 
   &__link {
-    padding: 20px 100px 20px 25px;
+    padding: 21px 100px 21px 30px;
     background-color: $color-3;
     position: relative;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
 
     &::after {
       content: '';
@@ -257,8 +268,6 @@
     }
   }
 
-  
-
   &__heading {
     font-size: 18px;
   }
@@ -270,6 +279,73 @@
   }
 }
 
+.products {
+  padding-top: 65px;
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 270px;
+    min-height: 378px;
+    padding-top: 24px;
+    padding-bottom:35px;
+    text-align: center;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    margin-bottom: 40px;
+
+    margin-left: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    margin-left: -30px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    margin-bottom: 63px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+}
+
+.filter {
+  &__item:not(:first-child){
+    margin-left:30px;
+  }
+
+  &__btn {
+    color: $filter-btn;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.mixitup-control-active {
+  color: $color-6;
+}
 
 @import 'media';
 
