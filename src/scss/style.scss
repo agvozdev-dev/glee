@@ -361,6 +361,11 @@
 
   &__btn {
     color: $filter-btn;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #575656;
+    }
   }
 }
 
