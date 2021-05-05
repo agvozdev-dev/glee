@@ -11,8 +11,6 @@
   padding-bottom: 27px;
 }
 
-
-
 .header {
   padding-top: 48px;
 
@@ -42,6 +40,29 @@
     color: $moderate-blue;
     @extend %rubik-500;
     font-size: 15px;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color .3s;    
+  }
+
+  &__link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '';
+    border-bottom: 2px solid $primary-color;
+    transition: width .3s;
+  }
+
+  &__link:hover::after {
+    width: 100%;
+  }
+
+  &__link:hover {
+    color: $primary-color;
   }
 }
 
@@ -331,20 +352,6 @@
   &__btn {
     color: $filter-btn;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-.mixitup-control-active {
-  color: $color-6;
 }
 
 @import 'media';
