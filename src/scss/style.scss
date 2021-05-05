@@ -320,6 +320,7 @@
   }
 
   &__item {
+    position: relative;
     max-width: 270px;
     width: 270px;
     min-height: 378px;
@@ -334,6 +335,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  &__item--active .user-interact {
+    display: flex;
   }
 
   &__images {
@@ -352,6 +357,11 @@
   &__name {
     margin-bottom: 10px;
   }
+
+  &__currency,
+  &__price {
+    color: $color-3;
+  }
 }
 
 .filter {
@@ -366,6 +376,67 @@
     &:hover {
       color: #575656;
     }
+  }
+}
+
+.user-interact {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+    &:nth-child(odd) {
+      background-color: #fff;
+
+      &:hover {
+        background-color: #fde3cc;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $color-3;
+      margin: 0 15px;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);  
+    }
+  }
+
+  &__search::before {
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/icons/search-2.svg');
+  }
+
+  &__cart::before {
+    width: 22px;
+    height: 20px;
+    background-image: url('../images/icons/cart-2.svg');
+  }
+
+  &__like::before {
+    width: 22px;
+    height: 18px;
+    background-image: url('../images/icons/heart-2.svg');
   }
 }
 
