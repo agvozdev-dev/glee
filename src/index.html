@@ -17,64 +17,29 @@
 
   @@include('components/shared/header.html')
 
-  <!-- вынести из header -->
-  <div class="header__content">
-    <!-- slider переименовать, product__slider -->
-    <ul class="slider">
-      <!--  -->
-      <!-- диван изображением, фон у элемента списка, кружок на псевдоэлементе -->
-      <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
-        <div class="inner-container">
-          <div class="slider__content">
-            <h1 class="slider__title">
-              Smart and trendy
-            </h1>
-            <div class="slider__description">
-              <p>
-                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              </p>
+  <div class="slider-wrapper container--large">
+      <ul class="product-slider">
+        <!--  -->
+        <!-- диван изображением, фон у элемента списка, кружок на псевдоэлементе -->
+        <li class="product-slider__item"">
+          <div class="container">
+            <div class="product-slider__content">
+              <h1 class="product-slider__title">
+                Smart and trendy
+              </h1>
+              <div class="product-slider__description">
+                <p>
+                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+              </div>
+              <a class="product-slider__link" href="#">
+                Shop Now
+              </a>
             </div>
-            <a class="slider__link" href="#">
-              Shop Now
-            </a>
+            <img src="images/slider/sofa.png" alt="Slider image">
           </div>
-        </div>
-      </li>
-      <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
-        <div class="inner-container">
-          <div class="slider__content">
-            <h1 class="slider__title">
-              Smart and trendy
-            </h1>
-            <div class="slider__description">
-              <p>
-                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              </p>
-            </div>
-            <a class="slider__link" href="#">
-              Shop Now
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
-        <div class="inner-container">
-          <div class="slider__content">
-            <h1 class="slider__title">
-              Smart and trendy
-            </h1>
-            <div class="slider__description">
-              <p>
-                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              </p>
-            </div>
-            <a class="slider__link" href="#">
-              Shop Now
-            </a>
-          </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
   </div>
 
   <!-- добавить вертикальные линии -->

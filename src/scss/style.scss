@@ -148,21 +148,15 @@
     &:hover {
       background-color: $color-5;
     }
-  }
 
-  &__apps::before {
-    content: '';
-    position: absolute;
-  }
-
-  &__apps::before {
-    transform: translate(-50%, -50%);
-  }
-
-  &__apps::before {
-    width: 20px;
-    height: 21px;
-    background-image: url('../images/icons/dots.png');
+    &::before {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 21px;
+      background-image: url('../images/icons/dots.png');
+    }
   }
 
   &__count {
@@ -180,12 +174,11 @@
   }
 }
 
-.slider {
+.product-slider {
   &__item {
     padding-top: 220px;
     padding-bottom: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #fcd7b6;
   }
 
   &__content {
