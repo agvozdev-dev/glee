@@ -1,24 +1,42 @@
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
 body {
-  color: $primary-color;
   @extend %dm-sans-700;
   font-size: 16px;
   line-height: 1.3;
+  background-color: #fff;
+  color: $primary-color;
 }
 
-.outer-container {
-  max-width: 1800px;
-}
-
-.inner-container {
+.container {
   max-width: 1200px;
-}
-
-.outer-container,
-.inner-container {
   margin: 0 auto;
   padding: 0 15px;
+
+  &--large {
+    max-width: 1800px;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+.title {
+  font-size: 36px;
+  color: $color-6;
+  text-align: center;
+  padding-bottom: 27px;
 }

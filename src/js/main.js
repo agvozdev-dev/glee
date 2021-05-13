@@ -18,7 +18,7 @@ $(function () {
   function subscribeToEvents() {
     const productsOfWeek = document.getElementsByClassName('products__item')
 
-    Array.prototype.forEach.call( productsOfWeek, element => {
+    Array.prototype.forEach.call(productsOfWeek, element => {
       const className = 'products__item--active'
 
       element.addEventListener('mouseover', () => element.classList.add(className));

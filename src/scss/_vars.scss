@@ -38,3 +38,14 @@ $filter-btn: #8b8b8b; /* неактивный пункт фильтра */
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
 }
+
+
+
+@mixin fonts ($ff, $fw) {
+  font-family: '$ff', sans-serif;
+  font-weight: fw;
+}
+
+.class1 {
+  @include fonts(Poppins, 700)
+}

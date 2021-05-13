@@ -6,110 +6,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee | Home</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicons/site.webmanifest">
 </head>
 
 <body>
-  <header class="header">
-    <div class="outer-container">
-      <div class="header__menu">
 
-        <a class="logo header__logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="Logo Glee">
-        </a>
+  @@include('components/shared/header.html')
 
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Home+</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Pages+</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="user-nav">
-          <div class="user-nav__search-wrapper">
-            <!-- todo add input -->
+  <!-- вынести из header -->
+  <div class="header__content">
+    <!-- slider переименовать, product__slider -->
+    <ul class="slider">
+      <!--  -->
+      <!-- диван изображением, фон у элемента списка, кружок на псевдоэлементе -->
+      <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
+        <div class="inner-container">
+          <div class="slider__content">
+            <h1 class="slider__title">
+              Smart and trendy
+            </h1>
+            <div class="slider__description">
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+            </div>
+            <a class="slider__link" href="#">
+              Shop Now
+            </a>
           </div>
-
-          <a class="user-nav__link user-nav__heart-link" href="#">
-            <span class="user-nav__heart-count">1</span>
-          </a>
-          <a class="user-nav__link user-nav__cart-link" href="#">
-            <span class="user-nav__cart-count">2</span>
-          </a>
-
-          <button class="user-nav__apps-btn" type="button"></button>
         </div>
-      </div>
-
-      <div class="header__content">
-        <ul class="slider">
-          <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
-            <div class="inner-container">
-              <div class="slider__content">
-                <h1 class="slider__title">
-                  Smart and trendy
-                </h1>
-                <p class="slider__description">
-                  Dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt
-                </p>
-                <a class="slider__link" href="#">
-                  Shop Now
-                </a>
-              </div>
+      </li>
+      <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
+        <div class="inner-container">
+          <div class="slider__content">
+            <h1 class="slider__title">
+              Smart and trendy
+            </h1>
+            <div class="slider__description">
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
             </div>
-          </li>
-          <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
-            <div class="inner-container">
-              <div class="slider__content">
-                <h1 class="slider__title">
-                  Smart and trendy
-                </h1>
-                <p class="slider__description">
-                  Dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt
-                </p>
-                <a class="slider__link" href="#">
-                  Shop Now
-                </a>
-              </div>
+            <a class="slider__link" href="#">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
+        <div class="inner-container">
+          <div class="slider__content">
+            <h1 class="slider__title">
+              Smart and trendy
+            </h1>
+            <div class="slider__description">
+              <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
             </div>
-          </li>
-          <li class="slider__item" style="background-image: url(images/slider/slider-bg.jpg);">
-            <div class="inner-container">
-              <div class="slider__content">
-                <h1 class="slider__title">
-                  Smart and trendy
-                </h1>
-                <p class="slider__description">
-                  Dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt
-                </p>
-                <a class="slider__link" href="#">
-                  Shop Now
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+            <a class="slider__link" href="#">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
-    </div>
-  </header>
-
+  <!-- добавить вертикальные линии -->
   <section class="feature">
     <div class="outer-container">
       <ul class="feature__list">
@@ -161,8 +129,11 @@
         </li>
       </ul>
 
+      <!-- ограничивать размер изображений -->
+      <!-- карточки сделать article отдельным блоком -->
       <ul class="products__images">
         <li class="products__item mix category-furnitures">
+          <!-- <article class='products-cart'></article> -->
           <img class="products__image" src="images/products/1.png" alt="product image">
           <div class="products__price-wrapper">
             <div class="products__name">
@@ -171,6 +142,7 @@
             <span class="products__currency">$</span>
             <span class="products__price">29.00</span>
           </div>
+          <!-- плавное появление, фон кнопок синий -->
           <ul class="user-interact">
             <li class="user-interact__item user-interact__search"></li>
             <li class="user-interact__item user-interact__cart"></li>
