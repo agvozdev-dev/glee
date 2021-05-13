@@ -30,9 +30,10 @@
       <div class="user-nav">
         <form class="search-form">
           <input class="search-form__btn" type="checkbox" name="request" id="search-form-btn">
-          <label class="search-form__label" for="search-form-btn"></label>
+          <label class="search-form__label" for="search-form-btn">
+            <span class="sr-only">Icon with search icon</span>
+          </label>
           <input class="search-form__input" type="search" placeholder="Search...">
-          <!-- sr-only -->
         </form>
 
         <div class="user-nav__wrapper">
@@ -52,7 +53,9 @@
           </a>
         </div>
 
-        <button class="user-nav__apps" type="button"></button>
+        <button class="user-nav__apps" type="button">
+          <span class="sr-only">Button to open applications menu</span>
+        </button>
       </div>
 
     </nav>
