@@ -99,4 +99,4 @@ exports.cleanDist = cleanDist;
 exports.htmlInclude = htmlInclude;
 
 exports.build   = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, htmlInclude, watching);

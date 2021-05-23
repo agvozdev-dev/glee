@@ -5,14 +5,14 @@ $(function () {
   subscribeToEvents();
 
   function configurePlugins() {
-    $('.slider').slick({
+    $('.product-slider').slick({
       autoplay: true,
       arrows: false,
       fade: true,
       dots: true,
     });
   
-    mixitup('.products__images');
+    mixitup('.products__gallery');
   }
 
   function subscribeToEvents() {

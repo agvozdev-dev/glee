@@ -9,43 +9,11 @@ $color-5: #585858; /* цвет текста рядом с иконками по�
 $color-6: #191919; /* цвет заголовковб, активный пункт фильтра */
 $filter-btn: #8b8b8b; /* неактивный пункт фильтра */
 
-%poppins-700 {
-  font-family: 'Poppins-Bold', sans-serif;
-  font-weight: 700;
+%icon-hover-effect {
+  fill: #fff;
 }
-
-%rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%rubik-500 {
-  font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 500;
-}
-
-%dm-sans-400 {
-  font-family: 'DMSans-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%dm-sans-500 {
-  font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 500;
-}
-
-%dm-sans-700 {
-  font-family: 'DMSans-Bold', sans-serif;
-  font-weight: 700;
-}
-
-
 
 @mixin fonts ($ff, $fw) {
-  font-family: '$ff', sans-serif;
-  font-weight: fw;
-}
-
-.class1 {
-  @include fonts(Poppins, 700)
+  font-family: $ff, sans-serif;
+  font-weight: $fw;
 }

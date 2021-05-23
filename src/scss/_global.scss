@@ -13,7 +13,7 @@
 }
 
 body {
-  @extend %dm-sans-700;
+  @include fonts('DMSans', 700);
   font-size: 16px;
   line-height: 1.3;
   background-color: #fff;
@@ -28,10 +28,6 @@ body {
   &--large {
     max-width: 1800px;
   }
-}
-
-a {
-  text-decoration: none;
 }
 
 .title {

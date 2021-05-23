@@ -15,210 +15,121 @@
 
 <body>
 
+  <h1 class="sr-only">Furniture store</h1>
+
   @@include('components/shared/header.html')
 
-  <div class="slider-wrapper container--large">
+  <div class="container container--large">
       <ul class="product-slider">
-        <!--  -->
-        <!-- диван изображением, фон у элемента списка, кружок на псевдоэлементе -->
-        <li class="product-slider__item"">
-          <div class="container">
-            <div class="product-slider__content">
-              <h1 class="product-slider__title">
-                Smart and trendy
-              </h1>
-              <div class="product-slider__description">
-                <p>
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-              </div>
-              <a class="product-slider__link" href="#">
-                Shop Now
-              </a>
-            </div>
-            <img src="images/slider/sofa.png" alt="Slider image">
-          </div>
-        </li>
+
+        @@include('components/mainPage/product-slider-item.html', {
+          'title': 'Smart and trendy 1',
+          'description': 'Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt',
+          'imagePath': 'images/slider/sofa.png'
+        })
+
+        @@include('components/mainPage/product-slider-item.html', {
+          'title': 'Smart and trendy 2',
+          'description': 'Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt',
+          'imagePath': 'images/slider/sofa.png'
+        })
+
+        @@include('components/mainPage/product-slider-item.html', {
+          'title': 'Smart and trendy 3',
+          'description': 'Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt',
+          'imagePath': 'images/slider/sofa.png'
+        })
+
       </ul>
   </div>
 
-  <!-- добавить вертикальные линии -->
-  <section class="feature">
-    <div class="outer-container">
+  <div class="feature">
+    <div class="container container--large">
       <ul class="feature__list">
-        <li class="feature__item feature__item--icon1">
-          <h1 class="feature__heading">Support 24/7.</h1>
-          <p class="feature__description">Contact us 24 hours a day, 7 days a week.</p>
-        </li>
-        <li class="feature__item feature__item--icon2">
-          <h1 class="feature__heading">Delivery.</h1>
-          <p class="feature__description">Free shipping on all US order.</p>
-        </li>
-        <li class="feature__item feature__item--icon3">
-          <h1 class="feature__heading">100% Payment secure.</h1>
-          <p class="feature__description">We ensure secure payment with PEV.</p>
-        </li>
+
+        @@include('components/mainPage/feature-item.html', {
+          'heading': 'Support 24/7.',
+          'description': 'Contact us 24 hours a day, 7 days a week.',
+        })
+
+        @@include('components/mainPage/feature-item.html', {
+          'heading': 'Delivery.',
+          'description': 'Free shipping on all US order.',
+        })
+
+        @@include('components/mainPage/feature-item.html', {
+          'heading': '100% Payment secure.',
+          'description': 'We ensure secure payment with PEV.',
+        })
+
       </ul>
     </div>
-  </section>
+  </div>
 
   <section class="products">
-    <div class="inner-container">
-      <h1 class="title">
-        Products of the week
-      </h1>
+    <div class="container">
+      <div class="title">
+        <p>Products of the week</p>
+      </div>
 
-      <ul class="filter products__filter">
-        <li class="filter__item">
-          <button class="filter__btn" type="button" data-filter="all">All</button>
-        </li>
-        <li class="filter__item">
-          <button class="filter__btn" type="button" data-filter=".category-furnitures">
-            Furnitures
-          </button>
-        </li>
-        <li class="filter__item">
-          <button class="filter__btn" type="button" data-filter=".category-chairs">
-            Chairs
-          </button>
-        </li>
-        <li class="filter__item">
-          <button class="filter__btn" type="button" data-filter=".category-lighting">
-            Lighting
-          </button>
-        </li>
-        <li class="filter__item">
-          <button class="filter__btn" type="button" data-filter=".category-decor">
-            Decor
-          </button>
-        </li>
-      </ul>
+      @@include('components/mainPage/filter.html')
 
-      <!-- ограничивать размер изображений -->
-      <!-- карточки сделать article отдельным блоком -->
-      <ul class="products__images">
-        <li class="products__item mix category-furnitures">
-          <!-- <article class='products-cart'></article> -->
-          <img class="products__image" src="images/products/1.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>Wooden radio</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <!-- плавное появление, фон кнопок синий -->
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-lighting">
-          <img class="products__image" src="images/products/2.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>Wooden chair</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-furnitures">
-          <img class="products__image" src="images/products/3.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>White chair</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-decor">
-          <img class="products__image" src="images/products/4.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>Retro table</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-decor">
-          <img class="products__image" src="images/products/5.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>Wooden radio</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-decor">
-          <img class="products__image" src="images/products/6.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p class="products__name">Wooden chair</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-chairs">
-          <img class="products__image" src="images/products/7.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>White chair</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
-        <li class="products__item mix category-chairs">
-          <img class="products__image" src="images/products/8.png" alt="product image">
-          <div class="products__price-wrapper">
-            <div class="products__name">
-              <p>Retro table</p>
-            </div>
-            <span class="products__currency">$</span>
-            <span class="products__price">29.00</span>
-          </div>
-          <ul class="user-interact">
-            <li class="user-interact__item user-interact__search"></li>
-            <li class="user-interact__item user-interact__cart"></li>
-            <li class="user-interact__item user-interact__like"></li>
-          </ul>
-        </li>
+      <ul class="products__gallery">
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-furnitures',
+          'imagePath': 'images/products/1.png',
+          'name': 'Wooden radio',
+          'price': '29.00'
+        })
+        
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-lighting',
+          'imagePath': 'images/products/2.png',
+          'name': 'Wooden chair',
+          'price': '29.00'
+        })
+
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-furnitures',
+          'imagePath': 'images/products/3.png',
+          'name': 'White chair',
+          'price': '29.00'
+        })
+
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-decor',
+          'imagePath': 'images/products/4.png',
+          'name': 'Retro table',
+          'price': '29.00'
+        })
+
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-decor',
+          'imagePath': 'images/products/5.png',
+          'name': 'Wooden radio',
+          'price': '29.00'
+        })
+
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-decor',
+          'imagePath': 'images/products/6.png',
+          'name': 'Wooden chair',
+          'price': '29.00'
+        })
+
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-chairs',
+          'imagePath': 'images/products/7.png',
+          'name': 'White chair',
+          'price': '29.00'
+        })
+
+        @@include('components/mainPage/product-card.html', {
+          'filter-category': 'category-chairs',
+          'imagePath': 'images/products/8.png',
+          'name': 'Retro table',
+          'price': '29.00'
+        })
       </ul>
 
     </div>
