@@ -1,0 +1,68 @@
+<!-- products-of-week длинное название, т.к. похожий блок будет встречаться в другом месте, в разделе recent products -->
+<!-- products-of-week__wrapper для задания отступа -->
+
+<section class="products-of-week">
+  <div class="container products-of-week__wrapper">
+    <h2 class="title">Products of the week</h2>
+
+    @@include('../product-filter/product-filter.html')
+
+    <ul class="products-gallery">
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-furnitures',
+        'imagePath': 'images/products/1.png',
+        'name': 'Wooden radio',
+        'price': '29.00'
+      })
+      
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-lighting',
+        'imagePath': 'images/products/2.png',
+        'name': 'Wooden chair',
+        'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-furnitures',
+        'imagePath': 'images/products/3.png',
+        'name': 'White chair',
+        'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-decor',
+        'imagePath': 'images/products/4.png',
+        'name': 'Retro table',
+        'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-decor',
+        'imagePath': 'images/products/5.png',
+        'name': 'Wooden radio',
+        'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-decor',
+        'imagePath': 'images/products/6.png',
+        'name': 'Wooden chair',
+        'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-chairs',
+        'imagePath': 'images/products/7.png',
+        'name': 'White chair',
+        'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+        'filter-category': 'category-chairs',
+        'imagePath': 'images/products/8.png',
+        'name': 'Retro table',
+        'price': '29.00'
+      })
+    </ul>
+  </div>
+</section>

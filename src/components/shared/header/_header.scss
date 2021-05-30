@@ -1,0 +1,201 @@
+.header {
+  padding-top: 48px;
+
+  &__logo {
+    padding-top: 3px;
+  }
+}
+
+.logo {
+  outline-color: $color-3;
+
+  &__img {
+    width: 146px;
+    height: 39px;
+    object-fit: contain;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  
+  &__list {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 145px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    @include fonts('Rubik', 500);
+    @include truncate-text();
+    display: block;
+    font-size: 15px;
+    color: $moderate-blue;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s;
+    max-width: 90px;
+    outline-color: $moderate-blue;
+    
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0;
+      content: '';
+      border-bottom: 1px solid $primary-color;
+      transition: width 0.3s;
+    }
+  
+    &:hover::after {
+      width: 100%;
+    }
+  
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:active {
+      color: #182b34;
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  margin-right: 22px;
+
+  &__btn{
+    display: none;
+  }
+
+  &__btn:checked ~ .search-form__input {
+    opacity: 1;
+  }
+
+  &__btn-label {
+    border-radius: 50%;
+    display: block;
+    padding: 25px;
+    background-color: $color-7;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-3;
+    }
+
+    &:active {
+      background-color: $user-interact-active;
+    }
+
+    &:hover > .icon {
+      @extend %icon-hover-effect;
+    }
+  }
+
+  &__input {
+    opacity: 0;
+    border-radius: 30px;
+    padding: 14px;
+    position: absolute;
+    transform: translateX(-100%);
+    left: -10px;
+    top: 0;
+    border: 1px solid $color-7;
+    transition: opacity 0.3s, border-color 0.3s;
+
+    &:focus {
+      border-color: $color-3;
+    }
+  }
+}
+
+.search-icon-image,
+.cart-icon-image,
+.heart-icon-image {
+  fill: $blue-icon-color;
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__wrapper {
+    background-color: #fcd7b6;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    margin-right: 18px;
+    padding: 5px 0;
+  }
+
+  &__link {
+    position: relative;
+    padding: 15px 33px 0 33px;
+
+    &:first-child {
+      border-right: 1px solid #fde7d3;
+    }
+
+    &:hover > svg {
+      fill: $color-3;
+    }
+
+    &:active > svg {
+      fill: #80a1b3;
+    }
+  }
+
+  &__icon {
+    fill: $dark-icon-color;
+    transition: fill 0.3s;
+  }
+
+  &__apps {
+    border-radius: 50%;
+    background-color: $color-3;
+    padding: 25px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #7095a9;
+    }
+
+    &:active {
+      background-color: $user-interact-active;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 21px;
+      height: 22px;
+      background-image: url('../images/icons/apps.svg');
+    }
+  }
+
+  &__count {
+    @include fonts('DMSans', 400);
+    font-size: 10px;
+    line-height: 1.7;
+    position: absolute;
+    top: 8px;
+    right: 25px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+  }
+}

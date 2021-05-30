@@ -1,0 +1,22 @@
+.product-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 76px;
+
+  &__item:not(:last-child){
+    margin-right: 30px;
+  }
+
+  &__btn {
+    color: #8b8b8b;
+    transition: color 0.3s;
+    
+    &:hover {
+      color: #575656;
+    }
+
+    &:active {
+      color: #272626;
+    }
+  }
+}

@@ -12,14 +12,14 @@ $(function () {
       dots: true,
     });
   
-    mixitup('.products__gallery');
+    mixitup('.products-gallery');
   }
 
   function subscribeToEvents() {
-    const productsOfWeek = document.getElementsByClassName('products__item')
+    const productsOfWeek = document.getElementsByClassName('products-gallery__item')
 
     Array.prototype.forEach.call(productsOfWeek, element => {
-      const className = 'products__item--active'
+      const className = 'products-gallery__item--active'
 
       element.addEventListener('mouseover', () => element.classList.add(className));
       element.addEventListener('mouseout',  () => element.classList.remove(className));
