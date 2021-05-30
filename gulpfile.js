@@ -7,11 +7,12 @@ const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin')
 const del = require('del')
+const fileInclude = require('gulp-file-include');
 
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'src/'
+      baseDir: 'dist/'
     }
   });
 }
@@ -39,11 +40,14 @@ function cleanDist() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/mixitup/dist/mixitup.js',
     'src/js/main.js'
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('src/js'))
+    .pipe(dest('dist/js'))
     .pipe(browserSync.stream());
 }
 
@@ -56,6 +60,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('src/css'))
+    .pipe(dest('dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -64,7 +69,8 @@ function build() {
     'src/css/style.min.css',
     'src/fonts/**/*',
     'src/js/main.min.js',
-    'src/*.html'
+    'src/*.html',
+    'src/**/*.json'
   ], { base: 'src' })
     .pipe(dest('dist'))
 }
@@ -72,7 +78,18 @@ function build() {
 function watching() {
   watch(['src/scss/**/*.scss'], styles)
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts)
-  watch(['src/*.html']).on('change', browserSync.reload)
+  watch(['src/**/*.html']).on('change', htmlInclude)
+  watch(['src/**/*.json']).on('change', htmlInclude)
+}
+
+function htmlInclude() {
+  return src(['src/**/*.html'])
+  .pipe(fileInclude({
+    prefix: '@@',
+    basepath: '@file'
+  }))
+  .pipe(dest('dist'))
+  .pipe(browserSync.stream());
 }
 
 exports.styles = styles;
@@ -81,6 +98,7 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.htmlInclude = htmlInclude;
 
 exports.build   = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, htmlInclude, watching);

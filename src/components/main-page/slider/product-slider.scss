@@ -1,0 +1,139 @@
+.product-slider {
+  &__item {
+    padding-top: 216px;
+    padding-bottom: 283px;
+    background-color: #fcd7b6;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    line-height: 1;
+    max-width: 415px;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    max-height: 264px;
+    object-fit: contain;
+  }
+
+  &__picture {
+    position: relative;
+    align-self: flex-end;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      width: 634px;
+      height: 634px;
+      right: -115px;
+      top: -175px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+  }
+
+  &__title {
+    @include fonts('Rubik', 500);
+    font-size: 72px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+
+    p {
+      @include truncate-multiline-text(2);
+    }
+  }
+
+  &__description {
+    @include fonts('Rubik', 400);
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 37px;
+    max-width: 365px;
+
+    p {
+      @include truncate-multiline-text(2);
+    }
+  }
+
+  &__link {
+    display: block;
+    max-width: 200px;
+    @include fonts('Rubik', 400);
+    padding: 21px 0 21px 30px;
+    background-color: $color-3;
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    transition: background-color 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      width: 23px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 17px;
+    }
+
+    &:hover {
+      background-color: #74b9df;
+    }
+
+    &:active {
+      background-color: #2a88bb;
+    }
+  }
+
+  &__link-text {
+    display: block;
+    max-width: 110px;
+    @include truncate-text();
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;  
+  bottom: 45px;
+
+  li {
+    z-index: 1;
+    padding: 0 8px;
+
+    button {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #fde3cc;
+      @include fonts('Rubik', 400);
+      font-size: 11px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f5a560;
+      }
+
+      &:active {
+        background-color: #d86c0e;
+      }
+    }
+
+    &.slick-active {
+      button {
+        background-color: #fff;
+      }
+    }
+  }
+}

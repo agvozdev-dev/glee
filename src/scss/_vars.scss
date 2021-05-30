@@ -1,0 +1,40 @@
+$primary-color: #243f4d; /* главный заголовок, цифры в правом верхнем углу, цифры на главное слайдере, название товара, описание товара */ 
+
+$moderate-blue: #436372; /* цвет пунктов меню, текст под главным заголовком, кнопка View more*/
+
+$user-interact-active: #436070;
+
+//TODO Change variables names
+
+$color-3: #a3bbc8; /* цвет кнопки, цвет иконок под header, цена товара */
+$color-4: #414141; /* цвет текста рядом с иконками под header */
+$color-5: #585858; /* цвет текста рядом с иконками под header */
+$color-6: #191919; /* цвет заголовковб, активный пункт фильтра */
+$color-7: #edf1f4;
+
+$dark-icon-color: #2e4652;
+$blue-icon-color: #a3bbc8;
+$light-icon-color: #fff;
+
+%icon-hover-effect {
+  fill: #fff;
+}
+
+@mixin truncate-multiline-text ($lineClamp) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+}
+
+@mixin truncate-text () {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin fonts ($ff, $fw) {
+  font-family: $ff, sans-serif;
+  font-weight: $fw;
+}
