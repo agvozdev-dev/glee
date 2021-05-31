@@ -44,3 +44,33 @@ body {
   transform: translate(-50%, -50%);  
   transition: fill 0.3s;
 }
+
+.arrow-link {
+  &__text {
+    max-width: 110px;
+    @include truncate-text();
+  }
+}
+
+.arrow-right {
+  position: absolute;
+  content: '';
+  width: 23px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 17px;
+
+  &--light {
+    fill: #fff;
+  }
+
+  &--light {
+    fill: #fff;
+  }
+
+  &--dark {
+    fill: #436372;
+  }
+}
+

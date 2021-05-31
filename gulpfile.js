@@ -76,10 +76,9 @@ function build() {
 }
 
 function watching() {
-  watch(['src/scss/**/*.scss'], styles)
+  watch(['src/**/*.scss'], styles)
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts)
   watch(['src/**/*.html']).on('change', htmlInclude)
-  watch(['src/**/*.json']).on('change', htmlInclude)
 }
 
 function htmlInclude() {

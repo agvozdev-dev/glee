@@ -1,67 +1,79 @@
-<!-- products-of-week длинное название, т.к. похожий блок будет встречаться в другом месте, в разделе recent products -->
-<!-- products-of-week__wrapper для задания отступа -->
-
-<section class="products-of-week">
+<section class="products-of-week products-of-week--offset">
+  <h2 class="title">Products of the week</h2>
   <div class="container products-of-week__wrapper">
-    <h2 class="title">Products of the week</h2>
-
     @@include('../product-filter/product-filter.html')
 
     <ul class="products-gallery">
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-furnitures',
-        'imagePath': 'images/products/1.png',
-        'name': 'Wooden radio',
-        'price': '29.00'
-      })
-      
-      @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-lighting',
-        'imagePath': 'images/products/2.png',
-        'name': 'Wooden chair',
-        'price': '29.00'
+      'filter-category': 'category-furnitures',
+      'imagePath': 'images/products/1.png',
+      'name': 'Wooden radio',
+      'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-furnitures',
-        'imagePath': 'images/products/3.png',
-        'name': 'White chair',
-        'price': '29.00'
+      'filter-category': 'category-lighting',
+      'imagePath': 'images/products/2.png',
+      'name': 'Wooden chair',
+      'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-decor',
-        'imagePath': 'images/products/4.png',
-        'name': 'Retro table',
-        'price': '29.00'
+      'filter-category': 'category-furnitures',
+      'imagePath': 'images/products/3.png',
+      'name': 'White chair',
+      'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-decor',
-        'imagePath': 'images/products/5.png',
-        'name': 'Wooden radio',
-        'price': '29.00'
+      'filter-category': 'category-decor',
+      'imagePath': 'images/products/4.png',
+      'name': 'Retro table',
+      'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-decor',
-        'imagePath': 'images/products/6.png',
-        'name': 'Wooden chair',
-        'price': '29.00'
+      'filter-category': 'category-decor',
+      'imagePath': 'images/products/5.png',
+      'name': 'Wooden radio',
+      'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-chairs',
-        'imagePath': 'images/products/7.png',
-        'name': 'White chair',
-        'price': '29.00'
+      'filter-category': 'category-decor',
+      'imagePath': 'images/products/6.png',
+      'name': 'Wooden chair',
+      'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-        'filter-category': 'category-chairs',
-        'imagePath': 'images/products/8.png',
-        'name': 'Retro table',
-        'price': '29.00'
+      'filter-category': 'category-chairs',
+      'imagePath': 'images/products/7.png',
+      'name': 'White chair',
+      'price': '29.00'
+      })
+
+      @@include('../../shared/products/product-card.html', {
+      'filter-category': 'category-chairs',
+      'imagePath': 'images/products/8.png',
+      'name': 'Retro table',
+      'price': '29.00'
+      })
+    </ul>
+  </div>
+
+  <div class="container container--large">
+    <ul class="top-products">
+      @@include('top-product.html', {
+        'imageSrc': '../../../images/main-page/top-product/1.png',
+        'title': 'Mirum Notare Tellus',
+        'description': 'LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight'
+      })
+
+      @@include('top-product.html', {
+        'imageSrc': '../../../images/main-page/top-product/2.png',
+        'title': 'Malesuada Tempor Euismod',
+        'description': '50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight'
       })
     </ul>
   </div>

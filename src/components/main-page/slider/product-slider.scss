@@ -2,7 +2,7 @@
   &__item {
     padding-top: 216px;
     padding-bottom: 283px;
-    background-color: #fcd7b6;
+    background-color: $bg-color;
   }
 
   &__wrapper {
@@ -64,26 +64,14 @@
 
   &__link {
     display: block;
+    position: relative;
     max-width: 200px;
     @include fonts('Rubik', 400);
-    padding: 21px 0 21px 30px;
+    padding: 21px 100px 21px 30px;
     background-color: $color-3;
-    position: relative;
     color: #fff;
     font-size: 15px;
     transition: background-color 0.3s;
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../images/icons/arrow-right.svg');
-      background-repeat: no-repeat;
-      width: 23px;
-      height: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 17px;
-    }
 
     &:hover {
       background-color: #74b9df;
@@ -93,13 +81,11 @@
       background-color: #2a88bb;
     }
   }
-
-  &__link-text {
-    display: block;
-    max-width: 110px;
-    @include truncate-text();
-  }
 }
+
+
+
+
 
 .slick-dots {
   position: absolute;
