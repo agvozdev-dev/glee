@@ -1,60 +1,66 @@
 <section class="products-of-week products-of-week--offset">
   <h2 class="title">Products of the week</h2>
   <div class="container products-of-week__wrapper">
-    @@include('../product-filter/product-filter.html')
+    @@include('../product-filter/product-filter.html', {
+      'all': 'vse',
+      'furnitures': '.product-furnitures',
+      'chairs': '.product-chairs',
+      'lighting': '.product-lighting',
+      'decor': '.product-decor'
+    })
 
     <ul class="products-gallery">
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-furnitures',
+      'filter-category': 'product-furnitures',
       'imagePath': 'images/products/1.png',
       'name': 'Wooden radio',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-lighting',
+      'filter-category': 'product-lighting',
       'imagePath': 'images/products/2.png',
       'name': 'Wooden chair',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-furnitures',
+      'filter-category': 'product-furnitures',
       'imagePath': 'images/products/3.png',
       'name': 'White chair',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-decor',
+      'filter-category': 'product-decor',
       'imagePath': 'images/products/4.png',
       'name': 'Retro table',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-decor',
+      'filter-category': 'product-decor',
       'imagePath': 'images/products/5.png',
       'name': 'Wooden radio',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-decor',
+      'filter-category': 'product-decor',
       'imagePath': 'images/products/6.png',
       'name': 'Wooden chair',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-chairs',
+      'filter-category': 'product-chairs',
       'imagePath': 'images/products/7.png',
       'name': 'White chair',
       'price': '29.00'
       })
 
       @@include('../../shared/products/product-card.html', {
-      'filter-category': 'category-chairs',
+      'filter-category': 'product-chairs',
       'imagePath': 'images/products/8.png',
       'name': 'Retro table',
       'price': '29.00'

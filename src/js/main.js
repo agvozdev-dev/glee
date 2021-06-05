@@ -13,6 +13,7 @@ $(function () {
     });
   
     mixitup('.products-gallery');
+    mixitup('.new-design-gallery');
   }
 
   function subscribeToEvents() {
