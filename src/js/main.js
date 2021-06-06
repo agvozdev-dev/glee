@@ -12,8 +12,18 @@ $(function () {
       dots: true,
     });
   
-    mixitup('.products-gallery');
-    mixitup('.new-design-gallery');
+    configureFilter('.products-of-week__wrapper')
+    configureFilter('.new-design__wrapper')
+  }
+
+  function configureFilter(selector) {
+    const config = {
+      controls: {
+        scope: 'local'
+      }
+    };
+
+    mixitup(selector, config)
   }
 
   function subscribeToEvents() {
