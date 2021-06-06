@@ -1,27 +1,7 @@
 <section class="products-of-week products-of-week--offset">
   <h2 class="title">Products of the week</h2>
   <div class="container products-of-week__wrapper">
-    <ul class="product-filter">
-      <li class="product-filter__item">
-        <button class="product-filter__btn" type="button" data-filter="all">All</button>
-      </li>
-    
-      <li class="product-filter__item">
-        <button class="product-filter__btn" type="button" data-filter=".product-furnitures">Furnitures</button>
-      </li>
-    
-      <li class="product-filter__item">
-        <button class="product-filter__btn" type="button" data-filter=".product-chairs">Chairs</button>
-      </li>
-    
-      <li class="product-filter__item">
-        <button class="product-filter__btn" type="button" data-filter=".product-lighting">Lighting</button>
-      </li>
-    
-      <li class="product-filter__item">
-        <button class="product-filter__btn" type="button" data-filter=".product-decor">Decor</button>
-      </li>
-    </ul>
+    @@include('../product-filter/product-filter.html')
 
     <ul class="products-gallery">
       <li class="products-gallery__item mix product-furnitures">
