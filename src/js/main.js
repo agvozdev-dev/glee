@@ -1,19 +1,20 @@
 $(function () {
   
-  configurePlugins();
+  configureProductSlider();
+
+  configureFilter('.products-of-week__wrapper')
+  
+  configureFilter('.new-design__wrapper')
 
   subscribeToEvents();
 
-  function configurePlugins() {
+  function configureProductSlider() {
     $('.product-slider').slick({
       autoplay: true,
       arrows: false,
       fade: true,
       dots: true,
     });
-  
-    configureFilter('.products-of-week__wrapper')
-    configureFilter('.new-design__wrapper')
   }
 
   function configureFilter(selector) {
