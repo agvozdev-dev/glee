@@ -2,9 +2,9 @@ $(function () {
   
   configureProductSlider();
 
-  configureFilter('.products-of-week__wrapper')
-  
-  configureFilter('.new-design__wrapper')
+  configureFilter('.products-of-week')
+
+  configureFilter('.new-design')
 
   subscribeToEvents();
 

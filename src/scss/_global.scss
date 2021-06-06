@@ -34,7 +34,7 @@ body {
   font-size: 36px;
   color: $color-6;
   text-align: center;
-  padding-bottom: 27px;
+  @include truncate-text()
 }
 
 .icon {
