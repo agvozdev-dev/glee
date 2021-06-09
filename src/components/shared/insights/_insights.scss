@@ -1,0 +1,20 @@
+.insights {
+  &__wrapper {
+    padding-top: 112px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    display: inline-block;
+  }
+}
+
+.view-all {
+  &__link {
+    line-height: 3.6;
+    margin-right: 14px;
+    color: #262626;
+  }
+}

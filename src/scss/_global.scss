@@ -35,6 +35,10 @@ body {
   color: $color-6;
   text-align: center;
   @include truncate-text()
+
+  &--left {
+    text-align: left;
+  }
 }
 
 .icon {
