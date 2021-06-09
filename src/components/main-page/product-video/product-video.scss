@@ -1,0 +1,60 @@
+.product-video {
+  &__wrapper {
+    position: relative;
+    @include centring-absolute();
+
+    &::before {
+      transition: background-color 0.3s;
+      @include play-icon(98px, 2);
+    }
+  
+    &::after {
+      transition: opacity 0.3s;
+      @include play-icon(127px, 1);
+      opacity: 0.4;
+    }
+
+    &:hover::before {
+      background-color: #7db3d1;
+    }
+
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &:hover .play-icon {
+      width: 25px;
+      height: 28px;
+    }
+
+
+    &:active::before {
+      background-color: #52a9da;
+    }
+
+    &:active::after {
+      opacity: 0.8;
+    }
+
+    &:active .play-icon {
+      width: 22px;
+      height: 25px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.play-icon {
+  position: absolute;
+  content: '';
+  z-index: 4;
+  @include centring-absolute();
+  transition: width 0.3s, height 0.3s;
+}

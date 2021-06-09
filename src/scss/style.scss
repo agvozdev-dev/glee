@@ -4,12 +4,8 @@
 @import 'libs';
 @import 'global';
 @import '../components/shared/header/header';
-@import '../components/main-page/slider/product-slider';
-@import '../components/main-page/feature/feature';
-@import '../components/main-page/product-filter/product-filter';
-@import '../components/main-page/products-of-week/products-of-week';
 @import '../components/shared/products/product-card';
-@import '../components/main-page/new-design/new-design';
+@import '../components/main-page/main-page';
 
 .user-interact {
   display: flex;

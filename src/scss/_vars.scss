@@ -39,3 +39,27 @@ $light-icon-color: #fff;
   font-family: $ff, sans-serif;
   font-weight: $fw;
 }
+
+@mixin centring-absolute() {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin play-icon($size, $zIndex) {
+  position: absolute;
+  content: '';
+  width: $size;
+  height: $size;
+  z-index: $zIndex;
+  border-radius: 50%;
+  background-color: $color-3;
+  @include centring-absolute();
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
