@@ -12,9 +12,22 @@
 }
 
 .view-all {
+  &__wrapper {
+    position: relative;
+    @include underline(#000);
+  }  
+
   &__link {
     line-height: 3.6;
-    margin-right: 14px;
     color: #262626;
+    transition: color 0.2s, border-bottom 0.8s;
+  }
+
+  &__text {
+    max-width: 100px;
+    margin-right: 14px;
+    @include truncate-text();
+    display: block;
+    float: left;
   }
 }

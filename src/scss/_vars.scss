@@ -57,6 +57,28 @@ $light-icon-color: #fff;
   @include centring-absolute();
 }
 
+@mixin underline($underline-color) {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '';
+    border-bottom: 1px solid $underline-color;
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:active {
+    color: #182b34;
+  }
+}
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

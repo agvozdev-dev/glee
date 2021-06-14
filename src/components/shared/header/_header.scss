@@ -43,28 +43,10 @@
     max-width: 90px;
     outline-color: $moderate-blue;
     
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 0;
-      content: '';
-      border-bottom: 1px solid $primary-color;
-      transition: width 0.3s;
-    }
-  
-    &:hover::after {
-      width: 100%;
-    }
+    @include underline($primary-color);
   
     &:hover {
       color: $primary-color;
-    }
-
-    &:active {
-      color: #182b34;
     }
   }
 }
