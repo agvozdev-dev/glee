@@ -24,10 +24,10 @@
   }
 
   &__text {
+    display: block;
+    float: left;
     max-width: 100px;
     margin-right: 14px;
     @include truncate-text();
-    display: block;
-    float: left;
   }
 }
