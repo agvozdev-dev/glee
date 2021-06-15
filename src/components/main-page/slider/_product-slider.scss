@@ -18,9 +18,7 @@
   &__image {
     position: relative;
     z-index: 1;
-    max-width: 640px;
-    max-height: 264px;
-    object-fit: contain;
+    @include fixed-image-size(640px, 264px, contain);
   }
 
   &__picture {

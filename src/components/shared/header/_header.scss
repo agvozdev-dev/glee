@@ -10,9 +10,7 @@
   outline-color: $color-3;
 
   &__img {
-    width: 146px;
-    height: 39px;
-    object-fit: contain;
+    @include fixed-image-size(146px, 39px, contain);
   }
 }
 
@@ -33,14 +31,12 @@
 
   &__link {
     @include fonts('Rubik', 500);
-    @include truncate-text();
-    display: block;
+    @include truncate-text(90px);
     font-size: 15px;
     color: $moderate-blue;
     position: relative;
     padding-bottom: 3px;
     transition: color 0.3s;
-    max-width: 90px;
     outline-color: $moderate-blue;
     
     @include underline($primary-color);

@@ -12,6 +12,7 @@ $color-5: #585858; /* цвет текста рядом с иконками по�
 $color-6: #191919; /* цвет заголовковб, активный пункт фильтра */
 $color-7: #edf1f4;
 $bg-color: #fcd7b6;
+$bg-color-2: #fef7f0;
 
 $dark-icon-color: #2e4652;
 $blue-icon-color: #a3bbc8;
@@ -29,10 +30,12 @@ $light-icon-color: #fff;
   -webkit-box-orient: vertical;
 }
 
-@mixin truncate-text () {
+@mixin truncate-text($maxWidth) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
+  max-width: $maxWidth;
 }
 
 @mixin fonts ($ff, $fw) {
@@ -77,6 +80,12 @@ $light-icon-color: #fff;
   &:active {
     color: #182b34;
   }
+}
+
+@mixin fixed-image-size($width, $height, $objectFit) {
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
 }
 
 @function max($numbers...) {

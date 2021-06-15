@@ -2,7 +2,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    background-color: #fef7f0;
+    background-color: $bg-color-2;
   }
 
   &__wrapper {
@@ -47,8 +47,7 @@
 
   &__heading {
     font-size: 18px;
-    display: block;
-    @include truncate-text();
+    @include truncate-text(100%);
   }
 
   &__description {

@@ -2,9 +2,7 @@
   &__image {
     margin: 0 auto;
     margin-bottom: 74px;
-    width: 186px;
-    height: 195px;
-    object-fit: contain;
+    @include fixed-image-size(186px, 195px, contain);
   }
 
   &__name {

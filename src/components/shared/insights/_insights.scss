@@ -1,8 +1,9 @@
 .insights {
-  &__wrapper {
+  &__title-wrapper {
     padding-top: 112px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 252px;
   }
 
   &__title {
@@ -24,10 +25,88 @@
   }
 
   &__text {
-    display: block;
     float: left;
-    max-width: 100px;
-    margin-right: 14px;
-    @include truncate-text();
+    margin-right: 18px;
+    @include truncate-text(100px);
   }
 }
+
+.calendar-icon,
+.user-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+
+.insight-cards {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    max-width: 370px;
+    margin-top: -250px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.insight-card {
+  &__content {
+    position: relative;
+    background-color: #fff;
+    padding: 35px 30px 26px 30px;
+  }
+
+  &__label {
+    position: absolute;
+    display: none;
+  }
+
+  &__description {
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    @include fonts('DMSans', 500);
+    font-size: 18px;
+    line-height: 1.2;
+
+    & > p {
+      // т.к. на карточках описание занимает разное число строк
+      height: 63px;
+      @include truncate-multiline-text(3);
+    }
+  }
+
+  &__signature {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    @include fixed-image-size(370px, 250px, cover);
+  }
+
+  &__date {
+    margin-right: 27px;
+    @include truncate-text(125px);
+  }
+  
+  &__user {
+    @include truncate-text(100px);
+  }
+
+  &__date,
+  &__user {
+    @include fonts('Rubik', 400);
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 2;
+  }
+}
+
+.insights-gallery {
+  background-color: $bg-color-2;
+  height: 185px;
+}
+

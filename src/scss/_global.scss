@@ -34,7 +34,7 @@ body {
   font-size: 36px;
   color: $color-6;
   text-align: center;
-  @include truncate-text()
+  @include truncate-text(100%)
 
   &--left {
     text-align: left;
@@ -51,8 +51,7 @@ body {
 
 .arrow-link {
   &__text {
-    max-width: 110px;
-    @include truncate-text();
+    @include truncate-text(110px);
   }
 }
 
@@ -77,4 +76,3 @@ body {
     fill: #436372;
   }
 }
-
