@@ -6,4 +6,8 @@
     justify-content: space-between;
     padding: 80px 85px 87px 50px;
   }
+
+  &__image {
+    @include fixed-image-size(120px, 80px, contain);
+  }
 }
