@@ -58,7 +58,7 @@
     padding: 35px 30px 26px 30px;
   }
 
-  &__label {
+  &__news {
     margin-bottom: 20px;
     margin-top: -53px;
     text-transform: uppercase;
@@ -69,6 +69,15 @@
     color: #fff;
     border-radius: 25px;
     @include truncate-text(102px);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $link-hover-color;
+    }
+
+    &:active {
+      background-color: $link-active-color;
+    }
   }
 
   &__description {

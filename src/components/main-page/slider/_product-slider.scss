@@ -72,11 +72,11 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #74b9df;
+      background-color: $link-hover-color;
     }
 
     &:active {
-      background-color: #2a88bb;
+      background-color: $link-active-color;
     }
   }
 }
