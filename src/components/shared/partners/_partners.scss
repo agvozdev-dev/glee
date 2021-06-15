@@ -1,0 +1,9 @@
+.partners {
+  background-color: $bg-color-2;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 85px 87px 50px;
+  }
+}
