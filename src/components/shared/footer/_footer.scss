@@ -39,6 +39,11 @@
     display: flex;
   }
 
+  &__menu-item {
+    @include truncate-text(80px);
+    color: $footer-text-color;
+  }
+
   &__menu-item:not(:last-child) {
     margin-right: 18px;
     padding-right: 10px;
@@ -51,6 +56,19 @@
 
   &__menu-copyright {
     @include truncate-text(350px);
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #4d4c4c;
+    }
+
+    &:active {
+      color: #000;
+    }
   }
 }
 
@@ -85,19 +103,6 @@
   &__item {
     margin-bottom: 10px;
     @include truncate-text(230px);
-  }
-
-  &__link {
-    color: inherit;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #4d4c4c;
-    }
-
-    &:active {
-      color: #000;
-    }
   }
 }
 
