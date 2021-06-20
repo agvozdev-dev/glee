@@ -1,0 +1,7 @@
+.logo {
+  outline-color: $color-3;
+
+  &__img {
+    @include fixed-image-size(146px, 39px, contain);
+  }
+}

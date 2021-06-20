@@ -1,0 +1,9 @@
+.footer {
+  &__address {
+    max-width: 215px;
+  }
+}
+
+.address {
+  @include font('Rubik', 400, $font-style: normal);
+}
