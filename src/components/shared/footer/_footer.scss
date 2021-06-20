@@ -54,6 +54,7 @@
     color: #1f2044;
     margin-bottom: 18px;
     display: block;
+    @include truncate-text(230px);
   }
 
   &__item {
