@@ -1,9 +1,28 @@
 .footer {
+  &__wrapper {
+    padding-top: 80px;
+  }
+
   &__address {
     max-width: 215px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 27px;
   }
 }
 
 .address {
-  @include font('Rubik', 400, $font-style: normal);
+  @include font('Rubik', 400, 14px, normal);
+  line-height: 1.6;
+  color: #7b7b7b;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__part {
+    margin-bottom: 12px;
+  }
 }
