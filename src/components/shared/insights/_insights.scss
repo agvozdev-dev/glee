@@ -71,11 +71,11 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: $link-hover-color;
+      background-color: $hover-color;
     }
 
     &:active {
-      background-color: $link-active-color;
+      background-color: $active-color;
     }
   }
 
