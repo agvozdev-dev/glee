@@ -1,10 +1,10 @@
 .footer {
   &__wrapper {
-    padding: 80px 0 75px;
+    padding: 80px 0 60px;
     border-bottom: 1px solid #dae4e9;
     @include font('Rubik', 400, 14px, normal);
     line-height: 1.6;
-    color: #7b7b7b;
+    color: $footer-text-color;
   }
 
   &__address {
@@ -26,6 +26,31 @@
 
   &__sections-item {
     width: 100%;
+  }
+
+  &__menu-wrapper {
+    @include font('Rubik', 400, 14px);
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu-list {
+    display: flex;
+  }
+
+  &__menu-item:not(:last-child) {
+    margin-right: 18px;
+    padding-right: 10px;
+    border-right: 2px solid $footer-text-color;
+  }
+
+  &__menu-link {
+    color: inherit;
+  }
+
+  &__menu-copyright {
+    @include truncate-text(350px);
   }
 }
 
