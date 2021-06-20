@@ -1,6 +1,8 @@
 $(function () {
-  
-  configureProductSlider();
+
+  configureSlider('.product-slider');
+
+  configurePartnersSlider('.partners-slider');
 
   configureFilter('.products-of-week')
 
@@ -8,12 +10,23 @@ $(function () {
 
   subscribeToEvents();
 
-  function configureProductSlider() {
-    $('.product-slider').slick({
+  function configureSlider(selector) {
+    $(selector).slick({
       autoplay: true,
       arrows: false,
       fade: true,
       dots: true,
+    });
+  }
+
+  function configurePartnersSlider(selector) {
+    $(selector).slick({
+      infinite: true,
+      autoplay: true,
+      arrows: false,
+      dots: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
     });
   }
 
