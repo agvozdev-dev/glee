@@ -62,8 +62,7 @@
     margin-bottom: 20px;
     margin-top: -53px;
     text-transform: uppercase;
-    @include fonts('Poppins', 700);
-    font-size: 14px;
+    @include font('Poppins', 700, 14px);
     padding: 7px 30px;
     background-color: $color-3;
     color: #fff;
@@ -84,8 +83,7 @@
     padding-bottom: 12px;
     margin-bottom: 15px;
     border-bottom: 1px solid #e0e0e0;
-    @include fonts('DMSans', 500);
-    font-size: 18px;
+    @include font('DMSans', 500, 18px);
     line-height: 1.2;
 
     & > p {
@@ -114,8 +112,7 @@
 
   &__date,
   &__user {
-    @include fonts('Rubik', 400);
-    font-size: 12px;
+    @include font('Rubik', 400, 12px);
     text-transform: uppercase;
     line-height: 2;
   }

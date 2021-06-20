@@ -1,0 +1,74 @@
+@mixin truncate-multiline-text ($lineClamp) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+}
+
+@mixin truncate-text($maxWidth) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: $maxWidth;
+}
+
+@mixin font($font-family, $font-weight, $font-size: inherit, $font-style: inherit) {
+  font-family: $font-family, sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-style: $font-style;
+}
+
+@mixin centring-absolute() {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin play-icon($size, $zIndex) {
+  position: absolute;
+  content: '';
+  width: $size;
+  height: $size;
+  z-index: $zIndex;
+  border-radius: 50%;
+  background-color: $color-3;
+  @include centring-absolute();
+}
+
+@mixin underline($underline-color) {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '';
+    border-bottom: 1px solid $underline-color;
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:active {
+    color: #182b34;
+  }
+}
+
+@mixin fixed-image-size($width, $height, $objectFit) {
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

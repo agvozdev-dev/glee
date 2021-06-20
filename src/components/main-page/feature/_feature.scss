@@ -51,9 +51,8 @@
   }
 
   &__description {
-    @include fonts('DMSans', 400);
+    @include font('DMSans', 400, 16px);
     @include truncate-multiline-text(2);
-    font-size: 16px;
     line-height: 2;
   }
 }

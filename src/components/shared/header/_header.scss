@@ -6,14 +6,6 @@
   }
 }
 
-.logo {
-  outline-color: $color-3;
-
-  &__img {
-    @include fixed-image-size(146px, 39px, contain);
-  }
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
@@ -30,9 +22,8 @@
   }
 
   &__link {
-    @include fonts('Rubik', 500);
+    @include font('Rubik', 500, 15px);
     @include truncate-text(90px);
-    font-size: 15px;
     color: $moderate-blue;
     position: relative;
     padding-bottom: 3px;
@@ -164,8 +155,7 @@
   }
 
   &__count {
-    @include fonts('DMSans', 400);
-    font-size: 10px;
+    @include font('DMSans', 400, 10px);
     line-height: 1.7;
     position: absolute;
     top: 8px;

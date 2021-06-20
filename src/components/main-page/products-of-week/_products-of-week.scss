@@ -69,7 +69,7 @@
   }
 
   &__description {
-    @include fonts('Rubik', 400);
+    @include font('Rubik', 400);
     line-height: 1.7;
     margin-bottom: 30px;
     max-width: 335px;

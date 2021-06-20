@@ -13,8 +13,7 @@
 }
 
 body {
-  @include fonts('DMSans', 700);
-  font-size: 16px;
+  @include font('DMSans', 700, 16px);
   line-height: 1.3;
   background-color: #fff;
   color: $primary-color;
