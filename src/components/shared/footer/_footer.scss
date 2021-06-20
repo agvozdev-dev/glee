@@ -1,29 +1,71 @@
 .footer {
   &__wrapper {
-    padding-top: 80px;
+    padding: 80px 0 75px;
+    border-bottom: 1px solid #dae4e9;
+    @include font('Rubik', 400, 14px, normal);
+    line-height: 1.6;
+    color: #7b7b7b;
   }
 
   &__address {
     max-width: 215px;
+    margin-right: 84px;
+    float: left;
   }
 
   &__logo {
     display: block;
     margin-bottom: 27px;
   }
+
+  &__sections {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+  }
 }
 
 .address {
-  @include font('Rubik', 400, 14px, normal);
-  line-height: 1.6;
-  color: #7b7b7b;
-
   &__title {
     text-transform: uppercase;
   }
 
   &__part {
-    margin-bottom: 12px;
     @include truncate-multiline-text(2);
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
+
+.section {
+  &__heading {
+    text-transform: uppercase;
+    @include font('DMSans', 700, 16px);
+    color: #1f2044;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #4d4c4c;
+    }
+
+    &:active {
+      color: #000;
+    }
   }
 }

@@ -4,24 +4,105 @@
     <div class="footer__wrapper">
       <address class="address footer__address">
         @@include('../logo/logo.html', { 'extraClasses': 'footer__logo' })
-        
-        <div class="street address__part">
-          <span class="street__title address__title">Address:</span>
-          <span class="street__value">4772 Wines Lane Houston, TX 77032</span>
+
+        <div class="address__part">
+          <span class="address__title">Address:</span>
+          <span class="address__value">4772 Wines Lane Houston, TX 77032</span>
         </div>
-        <div class="phone address__part">
-          <span class="phone__title address__title">Telephone:</span>
-          <span class="phone__value">
-            <span class="phone__prefix">+</span>
+
+        <div class="address__part">
+          <span class="address__title">Telephone:</span>
+          <a class="address__link address__value" href="tel:8323475843">
+            <span class="address__value-prefix">+</span>
             832-347-5843
-          </span>
+          </a>
         </div>
-        <div class="email address__part">
-          <span class="email__title address__title">Email:</span>
-          <span class="email__value">contact@Glee.com</span>
+
+        <div class="address__part">
+          <span class="address__title">Email:</span>
+          <a class="address__link address__value" href="mailto:contact@Glee.com">contact@Glee.com</a>
         </div>
       </address>
-    </div>
 
+      <ul class="footer__sections">
+        <li class="section footer__sections-item">
+          <span class="section__heading">Services</span>
+          <ul class="section__list">
+            <li class="section__item">
+              <a class="section__link" href="#">About Us</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Return Policy</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Our Blog</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Contact Us</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Terms & Condition</a>
+            </li>
+          </ul>
+        </li>
+        <li class="section footer__sections-item">
+          <span class="section__heading">Account</span>
+          <ul class="section__list">
+            <li class="section__item">
+              <a class="section__link" href="#">Your Account</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Checkout</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Login</a>
+            </li>
+            <li class="section__item">
+              <a class="section__link" href="#">Register</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- <div class="services">
+          <span class="services__heading">Services</span>
+          <ul class="services__list">
+            <li class="services__item">
+              <a class="services__link" href="#">About Us</a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">Return Policy</a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">Our Blog</a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">Contact Us</a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">Terms & Condition</a>
+            </li>
+          </ul>
+        </div> -->
+
+        <!-- <div class="account">
+          <span class="account__heading">Account</span>
+          <ul class="account__list">
+            <li class="account__item">
+              <a class="account__link" href="#">Your Account</a>
+            </li>
+            <li class="account__item">
+              <a class="account__link" href="#">Checkout</a>
+            </li>
+            <li class="account__item">
+              <a class="account__link" href="#">Login</a>
+            </li>
+            <li class="account__item">
+              <a class="account__link" href="#">Register</a>
+            </li>
+          </ul>
+        </div> -->
+
+      </ul>
+    </div>
   </div>
 </footer>
