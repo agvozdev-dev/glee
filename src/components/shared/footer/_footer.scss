@@ -59,6 +59,7 @@
 
   &__item {
     margin-bottom: 10px;
+    @include truncate-text(230px);
   }
 
   &__link {
@@ -78,6 +79,8 @@
 .subscribe {
   &__text {
     margin-bottom: 36px;
+    max-width: 240px;
+    @include truncate-multiline-text(2);
   }
 }
 
@@ -88,6 +91,7 @@
     border: none;
     padding-right: 0;
     transition: background-color 0.3;
+    float: left;
 
     &::placeholder {
       @include font('DMSans', 400, 12px);
@@ -108,6 +112,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     margin-left: -4px;
+    @include truncate-text(102px);
 
     &:hover {
       background-color: $hover-color;
