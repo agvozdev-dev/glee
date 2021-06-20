@@ -24,5 +24,6 @@
 
   &__part {
     margin-bottom: 12px;
+    @include truncate-multiline-text(2);
   }
 }
