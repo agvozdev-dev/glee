@@ -78,6 +78,7 @@ function build() {
   return src(srcGlobs, {
     base: 'src'
   })
+  .pipe(dest('dist'))
   .pipe(htmlInclude())
   .pipe(dest('dist'))
 }
