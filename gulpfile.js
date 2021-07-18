@@ -1,5 +1,4 @@
 const { src, dest, watch, parallel, series } = require('gulp');
-
 const scss = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
@@ -9,12 +8,21 @@ const imagemin = require('gulp-imagemin')
 const del = require('del')
 const fileInclude = require('gulp-file-include');
 
-function browsersync() {
-  browserSync.init({
-    server: {
-      baseDir: 'dist/'
-    }
-  });
+function scripts() {
+  const srcGlobs = [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'src/js/main.js'
+  ]
+
+  return src(srcGlobs)
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest('src/js'))
+    .pipe(dest('dist/js'))
+    .pipe(browserSync.stream());
 }
 
 function images() {
@@ -33,25 +41,6 @@ function images() {
     .pipe(dest('dist/images'))
 }
 
-function cleanDist() {
-  return del('dist')
-}
-
-function scripts() {
-  return src([
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/mixitup/dist/mixitup.js',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-    'src/js/main.js'
-  ])
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(dest('src/js'))
-    .pipe(dest('dist/js'))
-    .pipe(browserSync.stream());
-}
-
 function styles() {
   return src('src/scss/style.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
@@ -65,15 +54,32 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+function browsersync() {
+  browserSync.init({
+    server: {
+      baseDir: 'dist/'
+    }
+  });
+}
+
+function cleanDist() {
+  return del('dist')
+}
+
+//todo exclude several files
 function build() {
-  return src([
+  const srcGlobs = [
     'src/css/style.min.css',
     'src/fonts/**/*',
     'src/js/main.min.js',
-    'src/*.html',
     'src/**/*.json'
-  ], { base: 'src' })
-    .pipe(dest('dist'))
+  ]
+
+  return src(srcGlobs, {
+    base: 'src'
+  })
+  .pipe(htmlInclude())
+  .pipe(dest('dist'))
 }
 
 function watching() {
@@ -84,12 +90,12 @@ function watching() {
 
 function htmlInclude() {
   return src(['src/**/*.html'])
-  .pipe(fileInclude({
-    prefix: '@@',
-    basepath: '@file'
-  }))
-  .pipe(dest('dist'))
-  .pipe(browserSync.stream());
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@file',
+    }))
+    .pipe(dest('dist'))
+    .pipe(browserSync.stream());
 }
 
 exports.styles = styles;
@@ -100,5 +106,5 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.htmlInclude = htmlInclude;
 
-exports.build   = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, htmlInclude, watching);
