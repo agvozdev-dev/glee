@@ -1,8 +1,10 @@
+<!-- container отдельным div -->
 <section class="new-design container new-design--offset">
   <h2 class="title new-design__title">New Design</h2>
 
   @@include('../product-filter/product-filter.html')
 
+  <!-- new-design-gallery to new-design__list new-design__item -->
   <ul class="new-design-gallery">
     <li class="new-design-gallery__item mix product-furnitures">
       @@include('new-design-card.html', {

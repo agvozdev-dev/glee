@@ -1,5 +1,6 @@
 .product-slider {
   &__item {
+    //уйти от паддингов, задать высоту и через флексы позиционировать
     padding-top: 216px;
     padding-bottom: 283px;
     background-color: $bg-color;

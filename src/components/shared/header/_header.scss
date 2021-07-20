@@ -1,6 +1,14 @@
 .header {
   padding-top: 48px;
 
+  @include r($xl) {
+    padding-top: 32px;
+  }
+
+  @include r($md) {
+    padding-top: 32px;
+  }
+
   &__logo {
     padding-top: 3px;
   }
@@ -17,6 +25,7 @@
     padding-left: 145px;
   }
 
+  // переделать на &
   &__item:not(:last-child) {
     margin-right: 35px;
   }
@@ -50,7 +59,7 @@
     opacity: 1;
   }
 
-  &__btn-label {
+  &__label {
     border-radius: 50%;
     display: block;
     padding: 25px;
@@ -101,8 +110,8 @@
   
   &__wrapper {
     background-color: $bg-color;
-    height: 100%;
     border-radius: 50px;
+    height: 100%;
     display: flex;
     margin-right: 18px;
     padding: 5px 0;
@@ -111,6 +120,7 @@
   &__link {
     position: relative;
     padding: 15px 33px 0 33px;
+    //background-color: $bg-color;
 
     &:first-child {
       border-right: 1px solid #fde7d3;

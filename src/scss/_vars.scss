@@ -13,6 +13,7 @@ $color-6: #191919; /* цвет заголовковб, активный пунк
 $color-7: #edf1f4;
 $bg-color: #fcd7b6;
 $bg-color-2: #fef7f0;
+$bg-color-3: #f9b273;
 
 $dark-icon-color: #2e4652;
 $blue-icon-color: #a3bbc8;
@@ -22,6 +23,12 @@ $hover-color: #74b9df;
 $active-color: #2a88bb;
 
 $footer-text-color: #7b7b7b;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
 %icon-hover-effect {
   fill: #fff;

@@ -37,7 +37,7 @@ a {
   font-size: 36px;
   color: $color-6;
   text-align: center;
-  @include truncate-text(100%)
+  @include truncate-text(100%);
 
   &--left {
     text-align: left;
@@ -66,10 +66,6 @@ a {
   top: 50%;
   transform: translateY(-50%);
   right: 17px;
-
-  &--light {
-    fill: #fff;
-  }
 
   &--light {
     fill: #fff;
