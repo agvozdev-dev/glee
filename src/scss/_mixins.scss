@@ -1,3 +1,17 @@
+/* HEADER */
+
+@mixin divider() {
+  position: absolute;
+  content: '';
+  height: 27px;
+  width: 1px;
+  background-color: #fde7d3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* --- HEADER --- */
+
 @mixin truncate-multiline-text ($lineClamp) {
   overflow: hidden;
   text-overflow: ellipsis;
