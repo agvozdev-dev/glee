@@ -32,8 +32,14 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
+%icon-active-effect {
+  fill: #b6b3b3;
+}
+
+%icon-focus-effect {
+  fill: #d1cece;
+}
+
 %icon-hover-effect {
   fill: #fff;
 }
-
-

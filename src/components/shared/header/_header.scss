@@ -42,7 +42,15 @@
     outline-color: $moderate-blue;
     
     @include underline($primary-color);
-  
+
+    &:active {
+      color: #23353d;
+    }
+
+    &:focus {
+      color: #142933;
+    }
+
     &:hover {
       color: $primary-color;
     }
@@ -69,12 +77,24 @@
     transition: background-color 0.3s;
     cursor: pointer;
 
+    &:active {
+      background-color: $user-interact-active;
+    }
+
+    &:focus {
+      background-color: #50a4d1;
+    }
+
     &:hover {
       background-color: $color-3;
     }
 
-    &:active {
-      background-color: $user-interact-active;
+    &:active > .icon {
+      @extend %icon-active-effect;
+    }
+
+    &:focus > .icon {
+      @extend %icon-focus-effect;
     }
 
     &:hover > .icon {
@@ -142,16 +162,28 @@
       }
     }
 
+    &:active {
+      background-color: #fccba0;;
+    }
+
+    &:focus {
+      background-color: #fcbb82;;
+    }
+
     &:hover {
       background-color: $bg-color-3;
     }
 
-    &:hover > svg {
-      fill: #fff;
+    &:active > svg {
+      fill: #c4d7e0;
     }
 
-    &:active > svg {
-      fill: #80a1b3;
+    &:focus > svg {
+      fill: #a4bdca;
+    }
+
+    &:hover > svg {
+      fill: #fff;
     }
   }
 
@@ -166,12 +198,16 @@
     padding: 25px;
     transition: background-color 0.3s;
 
-    &:hover {
-      background-color: #7095a9;
+    &:active {
+      background-color: #add0e2;
     }
 
-    &:active {
-      background-color: $user-interact-active;
+    &:focus {
+      background-color: #92b1c2;
+    }
+
+    &:hover {
+      background-color: #7095a9;
     }
 
     &::before {
