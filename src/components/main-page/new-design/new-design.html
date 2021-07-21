@@ -1,52 +1,53 @@
-<!-- container отдельным div -->
-<section class="new-design container new-design--offset">
-  <h2 class="title new-design__title">New Design</h2>
+<section class="new-design new-design--offset">
+  <div class="container">
+    <h2 class="title new-design__title">New Design</h2>
 
-  @@include('../product-filter/product-filter.html')
+    @@include('../product-filter/product-filter.html')
 
-  <!-- new-design-gallery to new-design__list new-design__item -->
-  <ul class="new-design-gallery">
-    <li class="new-design-gallery__item mix product-furnitures">
-      @@include('new-design-card.html', {
-      'name': 'Beat Flat Pendant Black',
-      'style': 'Classic',
-      'imagePath': '@@webRoot/images/main-page/new-design/1.png'
-      })
-    </li>
-    <li class="new-design-gallery__item mix product-lighting">
-      @@include('new-design-card.html', {
-      'name': 'Lampe Sur Pieds Bamboo',
-      'style': 'Classic',
-      'imagePath': '@@webRoot/images/main-page/new-design/2.png'
-      })
-    </li>
-    <li class="new-design-gallery__item mix product-furnitures">
-      @@include('new-design-card.html', {
-      'name': 'Rattan Rocking Chair',
-      'style': 'Classic',
-      'imagePath': '@@webRoot/images/main-page/new-design/3.png'
-      })
-    </li>
-    <li class="new-design-gallery__item mix product-decor">
-      @@include('new-design-card.html', {
-      'name': 'Rattan Rocking Chair',
-      'style': 'Classic',
-      'imagePath': '@@webRoot/images/main-page/new-design/4.png'
-      })
-    </li>
-    <li class="new-design-gallery__item mix product-decor">
-      @@include('new-design-card.html', {
-      'name': 'Rattan Rocking Chair',
-      'style': 'Classic',
-      'imagePath': '@@webRoot/images/main-page/new-design/5.png'
-      })
-    </li>
-    <li class="new-design-gallery__item mix product-chairs">
-      @@include('new-design-card.html', {
-      'name': 'Lampe Sur Pieds Bamboo',
-      'style': 'Classic',
-      'imagePath': '@@webRoot/images/main-page/new-design/6.png'
-      })
-    </li>
-  </ul>
+    <!-- new-design-gallery to new-design__list new-design__item -->
+    <ul class="new-design-gallery">
+      <li class="new-design-gallery__item mix product-furnitures">
+        @@include('new-design-card.html', {
+        'name': 'Beat Flat Pendant Black',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/1.png'
+        })
+      </li>
+      <li class="new-design-gallery__item mix product-lighting">
+        @@include('new-design-card.html', {
+        'name': 'Lampe Sur Pieds Bamboo',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/2.png'
+        })
+      </li>
+      <li class="new-design-gallery__item mix product-furnitures">
+        @@include('new-design-card.html', {
+        'name': 'Rattan Rocking Chair',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/3.png'
+        })
+      </li>
+      <li class="new-design-gallery__item mix product-decor">
+        @@include('new-design-card.html', {
+        'name': 'Rattan Rocking Chair',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/4.png'
+        })
+      </li>
+      <li class="new-design-gallery__item mix product-decor">
+        @@include('new-design-card.html', {
+        'name': 'Rattan Rocking Chair',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/5.png'
+        })
+      </li>
+      <li class="new-design-gallery__item mix product-chairs">
+        @@include('new-design-card.html', {
+        'name': 'Lampe Sur Pieds Bamboo',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/6.png'
+        })
+      </li>
+    </ul>
+  </div>
 </section>

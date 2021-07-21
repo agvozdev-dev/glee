@@ -1,89 +1,91 @@
 <!-- products-of-week -> products-week -->
 <section class="products-of-week products-of-week--offset">
-  <div class="container products-of-week__wrapper">
-    <h2 class="title products-of-week__title">Products of the week</h2>
+  <div class="products-of-week__wrapper">
+    <div class="container">
+      <h2 class="title products-of-week__title">Products of the week</h2>
 
-    @@include('../product-filter/product-filter.html')
+      @@include('../product-filter/product-filter.html')
 
-    <ul class="products-gallery">
-      <li class="products-gallery__item mix product-furnitures">
-        @@include('../../shared/products/product-card.html', {
+      <ul class="products-gallery">
+        <li class="products-gallery__item mix product-furnitures">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/1.png',
           'name': 'Wooden radio',
           'price': '29.00'
           })
-      </li>
-      
-      <li class="products-gallery__item mix product-lighting">
-        @@include('../../shared/products/product-card.html', {
+        </li>
+
+        <li class="products-gallery__item mix product-lighting">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/2.png',
           'name': 'Wooden chair',
           'price': '29.00'
           })
-      </li>
-      
-      <li class="products-gallery__item mix product-furnitures">
-        @@include('../../shared/products/product-card.html', {
+        </li>
+
+        <li class="products-gallery__item mix product-furnitures">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/3.png',
           'name': 'White chair',
           'price': '29.00'
           })
-      </li>
+        </li>
 
-      <li class="products-gallery__item mix product-decor">
-        @@include('../../shared/products/product-card.html', {
+        <li class="products-gallery__item mix product-decor">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/4.png',
           'name': 'Retro table',
           'price': '29.00'
           })
-      </li>
+        </li>
 
-      <li class="products-gallery__item mix product-decor">
-        @@include('../../shared/products/product-card.html', {
+        <li class="products-gallery__item mix product-decor">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/5.png',
           'name': 'Wooden radio',
           'price': '29.00'
           })
-      </li>
+        </li>
 
-      <li class="products-gallery__item mix product-decor">
-        @@include('../../shared/products/product-card.html', {
+        <li class="products-gallery__item mix product-decor">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/6.png',
           'name': 'Wooden chair',
           'price': '29.00'
           })
-      </li>
-      
-      <li class="products-gallery__item mix product-chairs">
-        @@include('../../shared/products/product-card.html', {
+        </li>
+
+        <li class="products-gallery__item mix product-chairs">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/7.png',
           'name': 'White chair',
           'price': '29.00'
-          })  
-      </li>
+          })
+        </li>
 
-      <li class="products-gallery__item mix product-chairs">
-        @@include('../../shared/products/product-card.html', {
+        <li class="products-gallery__item mix product-chairs">
+          @@include('../../shared/products/product-card.html', {
           'imagePath': '@@webRoot/images/products/8.png',
           'name': 'Retro table',
           'price': '29.00'
           })
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="container container--large">
     <ul class="top-products">
       @@include('top-product.html', {
-        'imageSrc': '@@webRoot/images/main-page/top-product/1.png',
-        'title': 'Mirum Notare Tellus',
-        'description': 'LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight'
+      'imageSrc': '@@webRoot/images/main-page/top-product/1.png',
+      'title': 'Mirum Notare Tellus',
+      'description': 'LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight'
       })
 
       @@include('top-product.html', {
-        'imageSrc': '@@webRoot/images/main-page/top-product/2.png',
-        'title': 'Malesuada Tempor Euismod',
-        'description': '50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight'
+      'imageSrc': '@@webRoot/images/main-page/top-product/2.png',
+      'title': 'Malesuada Tempor Euismod',
+      'description': '50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight'
       })
     </ul>
   </div>
