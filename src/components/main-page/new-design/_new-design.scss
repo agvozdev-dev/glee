@@ -7,12 +7,12 @@
   &__title {
     padding-bottom: 20px;
   }
-}
 
-.new-design-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -36px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -36px;
+  }
 
   &__item {
     position: relative;
