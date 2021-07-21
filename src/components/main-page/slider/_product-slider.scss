@@ -22,7 +22,7 @@
     @include fixed-image-size(640px, 264px, contain);
   }
 
-  &__picture {
+  &__image-wrapper {
     position: relative;
     align-self: flex-end;
 
@@ -30,8 +30,10 @@
       content: '';
       position: absolute;
       border-radius: 50%;
-      width: 634px;
-      height: 634px;
+      width: 33vw;
+      height: 58.7vw;
+      max-width: 634px;
+      max-height: 634px;
       right: -115px;
       top: -175px;
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
