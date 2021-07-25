@@ -79,39 +79,43 @@
       background-color: $active-color;
     }
   }
-}
 
-.slick-dots {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 100%;  
-  bottom: 45px;
-
-  li {
-    z-index: 1;
-    padding: 0 8px;
-
-    button {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background-color: #fde3cc;
-      @include font('Rubik', 400, 11px);
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #f5a560;
-      }
-
-      &:active {
-        background-color: #d86c0e;
-      }
-    }
-
-    &.slick-active {
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;  
+    bottom: 45px;
+  
+    li {
+      z-index: 1;
+      padding: 0 8px;
+  
       button {
-        background-color: #fff;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: #fde3cc;
+        @include font('Rubik', 400, 11px);
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #f5a560;
+        }
+  
+        &:focus {
+          background-color: #e78732;
+        }
+
+        &:active {
+          background-color: #d86c0e;
+        }
+      }
+  
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
       }
     }
   }
