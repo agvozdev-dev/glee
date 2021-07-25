@@ -1,12 +1,12 @@
-.product-filter,
-.new-design-filter {
+.product-filter {
   display: flex;
   justify-content: center;
   margin-bottom: 76px;
 
-  // переделать на &
-  &__item:not(:last-child){
-    margin-right: 30px;
+  &__item {
+    &:not(:last-child){
+      margin-right: 30px;
+    }
   }
 
   &__btn {
