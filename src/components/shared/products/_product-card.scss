@@ -53,7 +53,7 @@
       background-color: $user-interact-active;
     }
 
-    &:hover > .icon {
+    &:hover .icon {
       @extend %icon-hover-effect;
     }
 
