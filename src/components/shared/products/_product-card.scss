@@ -1,4 +1,6 @@
 .product-card {
+  position: relative;
+
   &__image {
     margin: 0 auto;
     margin-bottom: 74px;
@@ -13,6 +15,14 @@
   &__currency,
   &__price {
     color: $color-3;
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 
