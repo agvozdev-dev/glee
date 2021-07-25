@@ -18,17 +18,26 @@
     position: relative;
     background-color: #f8f8f8;
     border-radius: 5px;
-    padding: 35px 157px 126px 37px;
+    width: 370px;
     margin-right: 30px;
     margin-bottom: 35px;
+  }
+
+  &__content {
+    padding: 37px 0 0 37px;
   }
 }
 
 .new-design-card {
+  position: relative;
+  height: 100%;
+
   &__name {
     @include truncate-multiline-text(2);
     margin-bottom: 12px;
     max-width: 175px;
+    font-size: 20px;
+    color: $color-6;
   }
 
   &__style {
@@ -38,16 +47,21 @@
   }
 
   &__link {
-    font-size: 20px;
-    color: $color-6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
   }
 
   &__image {
-    position: absolute;
-    content: '';
-    right: 0;
-    bottom: 15px;
-    z-index: 1;
+    margin: -55px 0 0 auto;
     @include fixed-image-size(271px, 180px, contain);
+  }
+
+  &__image--shifted {
+    margin: -62px 55px 0 auto;
+    @include fixed-image-size(112px, 143px, contain);
   }
 }
