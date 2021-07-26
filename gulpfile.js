@@ -7,6 +7,32 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin')
 const del = require('del')
 const fileInclude = require('gulp-file-include');
+const svgSprite = require('gulp-svg-sprite');
+const replace = require('gulp-replace');
+const cheerio = require('gulp-cheerio');
+
+const svgSprites = () => {
+  return src(['src/images/icons/**.svg'])
+  .pipe(cheerio({
+    run: function($) {
+      $('[fill]').removeAttr('fill')
+      $('[stroke]').removeAttr('stroke')
+      $('[style]').removeAttr('style')
+    },
+    parserOptions: {
+      xmlMode: true
+    }
+  }))
+  .pipe(replace('&gt;', '>'))
+  .pipe(svgSprite({
+    mode: {
+      stack: {
+        sprite: '../sprite.svg'
+      }
+    }
+  }))
+  .pipe(dest('src/images'))
+}
 
 function scripts() {
   const srcGlobs = [
@@ -87,6 +113,7 @@ function watching() {
   watch(['src/**/*.scss'], styles)
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts)
   watch(['src/**/*.html']).on('change', htmlInclude)
+  watch(['src/images/icons/**.svg']).on('change', svgSprites)
 }
 
 function htmlInclude() {
@@ -99,6 +126,7 @@ function htmlInclude() {
     .pipe(browserSync.stream());
 }
 
+exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -108,4 +136,4 @@ exports.cleanDist = cleanDist;
 exports.htmlInclude = htmlInclude;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, htmlInclude, watching);
+exports.default = parallel(styles, svgSprites, scripts, browsersync, htmlInclude, watching);
