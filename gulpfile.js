@@ -143,4 +143,4 @@ exports.cleanDist   = cleanDist
 exports.svgSprites  = svgSprites
 
 exports.build   = series(cleanDist, images, build)
-exports.default = parallel(watching, styles, scripts, svgSprites, htmlInclude, browsersync)
+exports.default = parallel(styles, scripts, svgSprites, htmlInclude, browsersync, watching)

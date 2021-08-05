@@ -1,5 +1,5 @@
 .header {
-  padding-top: 48px;
+  padding-top: 49px;
 
   @include r($xl) {
     padding-top: 32px;
@@ -71,6 +71,10 @@
     transition: background-color 0.3s;
     cursor: pointer;
 
+    &:hover {
+      background-color: $color-3;
+    }
+
     &:active {
       background-color: $user-interact-active;
     }
@@ -79,19 +83,15 @@
       background-color: #50a4d1;
     }
 
-    &:hover {
-      background-color: $color-3;
-    }
-
-    &:active > .icon {
+    &:active .icon {
       @extend %icon-active-effect;
     }
 
-    &:focus > .icon {
+    &:focus .icon {
       @extend %icon-focus-effect;
     }
 
-    &:hover > .icon {
+    &:hover .icon {
       @extend %icon-hover-effect;
     }
   }
@@ -114,11 +114,11 @@
 }
 
 .search-icon,
-.cart-icon-image,
-.heart-icon-image {
-  fill: yellow;
-  width: 30px;
-  height: 30px;
+.cart-icon,
+.heart-icon {
+  fill: $blue-icon-color;
+  width: 20px;
+  height: 20px;
 }
 
 .user-nav {
@@ -158,16 +158,16 @@
       }
     }
 
+    &:hover {
+      background-color: $bg-color-3;
+    }
+
     &:active {
       background-color: #fccba0;;
     }
 
     &:focus {
       background-color: #fcbb82;;
-    }
-
-    &:hover {
-      background-color: $bg-color-3;
     }
 
     &:active > svg {
@@ -186,6 +186,8 @@
   &__icon {
     fill: $dark-icon-color;
     transition: fill 0.3s;
+    width: 22px;
+    height: 20px;
   }
 
   &__apps {
