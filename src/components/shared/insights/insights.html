@@ -22,28 +22,121 @@
     <div class="container">
       <ul class="insight-cards">
         <li class="insight-cards__item">
-          @@include('insight-card.html', {
-            'imagePath': '@@webRoot/images/main-page/insights/1.jpg',
-            'description': 'Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-            'date': '28 SEPTEMBER, 2020',
-            'user': 'by admin'
-          })
+          <article class="insight-card">
+  <h3 class="sr-only">Insight card</h3>
+  <a class="insight-card__link" href="#">
+    <img class="insight-card__image" src=../../../images/main-page/insights/1.jpg alt="Insight card image">
+  </a>
+
+  <div class="insight-card__content">
+    <a class="insight-card__news" href="#">News</a>
+    <div class="insight-card__description">
+      <p>Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    </div>
+    
+    <div class="insight-card__signature">
+      <div class="insight-card__date-wrapper">
+        <span class="sr-only">Calendar icon</span>
+        <svg class="calendar-icon" aria-hidden="true" data-prefix="far" data-icon="calendar-alt"
+          role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+          </path>
+        </svg>
+        <time class="insight-card__date">28 SEPTEMBER, 2020</time>
+      </div>
+
+      <div class="insight-card__user-wrapper">
+        <span class="sr-only">User icon</span>
+        <svg class="user-icon" aria-hidden="true" data-prefix="fas" data-icon="user" role="img"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+          </path>
+        </svg>
+        <span class="insight-card__user">by admin</span>
+      </div>
+    </div>
+  </div>
+</article>
         </li>
         <li class="insight-cards__item">
-          @@include('insight-card.html', {
-            'imagePath': '@@webRoot/images/main-page/insights/2.jpg',
-            'description': 'Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore',
-            'date': '28 SEPTEMBER, 2020',
-            'user': 'by admin'
-          })
+          <article class="insight-card">
+  <h3 class="sr-only">Insight card</h3>
+  <a class="insight-card__link" href="#">
+    <img class="insight-card__image" src=../../../images/main-page/insights/2.jpg alt="Insight card image">
+  </a>
+
+  <div class="insight-card__content">
+    <a class="insight-card__news" href="#">News</a>
+    <div class="insight-card__description">
+      <p>Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+    </div>
+    
+    <div class="insight-card__signature">
+      <div class="insight-card__date-wrapper">
+        <span class="sr-only">Calendar icon</span>
+        <svg class="calendar-icon" aria-hidden="true" data-prefix="far" data-icon="calendar-alt"
+          role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+          </path>
+        </svg>
+        <time class="insight-card__date">28 SEPTEMBER, 2020</time>
+      </div>
+
+      <div class="insight-card__user-wrapper">
+        <span class="sr-only">User icon</span>
+        <svg class="user-icon" aria-hidden="true" data-prefix="fas" data-icon="user" role="img"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+          </path>
+        </svg>
+        <span class="insight-card__user">by admin</span>
+      </div>
+    </div>
+  </div>
+</article>
         </li>
         <li class="insight-cards__item">
-          @@include('insight-card.html', {
-            'imagePath': '@@webRoot/images/main-page/insights/3.jpg',
-            'description': 'Rncididunt ut labore et dolore magna aliqua. Ut enim',
-            'date': '28 SEPTEMBER, 2020',
-            'user': 'by admin'
-          })
+          <article class="insight-card">
+  <h3 class="sr-only">Insight card</h3>
+  <a class="insight-card__link" href="#">
+    <img class="insight-card__image" src=../../../images/main-page/insights/3.jpg alt="Insight card image">
+  </a>
+
+  <div class="insight-card__content">
+    <a class="insight-card__news" href="#">News</a>
+    <div class="insight-card__description">
+      <p>Rncididunt ut labore et dolore magna aliqua. Ut enim</p>
+    </div>
+    
+    <div class="insight-card__signature">
+      <div class="insight-card__date-wrapper">
+        <span class="sr-only">Calendar icon</span>
+        <svg class="calendar-icon" aria-hidden="true" data-prefix="far" data-icon="calendar-alt"
+          role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+          </path>
+        </svg>
+        <time class="insight-card__date">28 SEPTEMBER, 2020</time>
+      </div>
+
+      <div class="insight-card__user-wrapper">
+        <span class="sr-only">User icon</span>
+        <svg class="user-icon" aria-hidden="true" data-prefix="fas" data-icon="user" role="img"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+          </path>
+        </svg>
+        <span class="insight-card__user">by admin</span>
+      </div>
+    </div>
+  </div>
+</article>
         </li>
       </ul>
     </div>

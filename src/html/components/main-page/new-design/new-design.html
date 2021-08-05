@@ -1,0 +1,58 @@
+<section class="new-design new-design--offset">
+  <div class="container">
+    <h2 class="title new-design__title">New Design</h2>
+
+    @@include('../product-filter/product-filter.html')
+
+    <ul class="new-design__list">
+      <li class="new-design__item mix product-furnitures">
+        @@include('new-design-card.html', {
+        'name': 'Beat Flat Pendant Black',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/1.png',
+        'extraImageClasses': ''
+        })
+      </li>
+      <li class="new-design__item mix product-lighting">
+        @@include('new-design-card.html', {
+        'name': 'Lampe Sur Pieds Bamboo',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/2.png',
+        'extraImageClasses': ''
+        })
+      </li>
+      <li class="new-design__item mix product-furnitures">
+        @@include('new-design-card.html', {
+        'name': 'Rattan Rocking Chair',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/3.png',
+        'extraImageClasses': 'new-design-card__image--shifted'
+        })
+      </li>
+      <li class="new-design__item mix product-decor">
+        @@include('new-design-card.html', {
+        'name': 'Rattan Rocking Chair',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/4.png',
+        'extraImageClasses': ''
+        })
+      </li>
+      <li class="new-design__item mix product-decor">
+        @@include('new-design-card.html', {
+        'name': 'Rattan Rocking Chair',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/5.png',
+        'extraImageClasses': 'new-design-card__image--shifted'
+        })
+      </li>
+      <li class="new-design__item mix product-chairs">
+        @@include('new-design-card.html', {
+        'name': 'Lampe Sur Pieds Bamboo',
+        'style': 'Classic',
+        'imagePath': '@@webRoot/images/main-page/new-design/6.png',
+        'extraImageClasses': ''
+        })
+      </li>
+    </ul>
+  </div>
+</section>

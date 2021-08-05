@@ -1,23 +1,32 @@
 <div class="feature">
   <div class="container container--large">
     <ul class="feature__list">
-      @@include('feature-item.html', {
-        'heading': 'Support 24/7.',
-        'description': 'Contact us 24 hours a day, 7 days a week.',
-        'modifierPrefix': 'support'
-      })
+      <li class="feature__item">
+  <div class="feature__wrapper feature__wrapper--support">
+    <span class="feature__heading">Support 24/7.</span>
+    <div class="feature__description">
+      <p>Contact us 24 hours a day, 7 days a week.</p>
+    </div>
+  </div>
+</li>
 
-      @@include('feature-item.html', {
-        'heading': 'Delivery.',
-        'description': 'Free shipping on all US order.',
-        'modifierPrefix': 'delivery'
-      })
+      <li class="feature__item">
+  <div class="feature__wrapper feature__wrapper--delivery">
+    <span class="feature__heading">Delivery.</span>
+    <div class="feature__description">
+      <p>Free shipping on all US order.</p>
+    </div>
+  </div>
+</li>
 
-      @@include('feature-item.html', {
-        'heading': '100% Payment secure.',
-        'description': 'We ensure secure payment with PEV.',
-        'modifierPrefix': 'payment'
-      })
+      <li class="feature__item">
+  <div class="feature__wrapper feature__wrapper--payment">
+    <span class="feature__heading">100% Payment secure.</span>
+    <div class="feature__description">
+      <p>We ensure secure payment with PEV.</p>
+    </div>
+  </div>
+</li>
     </ul>
   </div>
 </div>

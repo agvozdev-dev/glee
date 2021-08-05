@@ -113,10 +113,12 @@
   }
 }
 
-.search-icon-image,
+.search-icon,
 .cart-icon-image,
 .heart-icon-image {
-  fill: $blue-icon-color;
+  fill: yellow;
+  width: 30px;
+  height: 30px;
 }
 
 .user-nav {

@@ -2,9 +2,7 @@
   <div class="container container--large">
     <nav class="menu">
 
-      <a class="logo header__logo" href="#">
-  <img class="logo__img" src="./images/logo.png" alt="Glee logo" width="146" height="39">
-</a>
+      @@include('../logo/logo.html', { 'extraClasses': 'header__logo', 'webRoot': '.' })
 
       <ul class="menu__list">
         <li class="menu__item">
@@ -32,7 +30,7 @@
           <label class="search-form__label" for="search-form-btn">
             <span class="sr-only">Search icon</span>
             <svg class="search-icon icon">
-              <use xlink:href="../../../images/sprite.svg#search"></use>
+              <use xlink:href="@@webRoot/images/sprite.svg#search"></use>
             </svg>
           </label>
           <input class="search-form__btn" type="checkbox" name="search-checkbox" id="search-form-btn">
