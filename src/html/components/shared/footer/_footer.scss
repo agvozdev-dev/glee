@@ -20,8 +20,6 @@
 
   &__sections {
     display: flex;
-    // проверить необходимость
-    justify-content: flex-start;
     padding-top: 14px;
   }
 
@@ -69,6 +67,10 @@
 
     &:active {
       color: #000;
+    }
+
+    &:focus {
+      color: #414040;
     }
   }
 }
@@ -151,6 +153,10 @@
 
     &:active {
       background-color: $active-color;
+    } 
+
+    &:focus {
+      background-color: $focus-color;
     } 
   }
 }

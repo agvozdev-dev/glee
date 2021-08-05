@@ -83,6 +83,10 @@
     &:active {
       background-color: $active-color;
     }
+
+    &:focus {
+      background-color: $focus-color;
+    }
   }
 
   &__description {

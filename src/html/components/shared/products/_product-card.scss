@@ -53,6 +53,10 @@
       background-color: $user-interact-active;
     }
 
+    &:focus {
+      background-color: #50a4d1;
+    }
+
     &:hover .icon {
       @extend %icon-hover-effect;
     }

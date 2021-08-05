@@ -39,6 +39,19 @@
       width: 22px;
       height: 25px;
     }
+
+    &:focus::before {
+      background-color: #399fda;
+    }
+
+    &:focus::after {
+      opacity: 0.85;
+    }
+
+    &:focus .play-icon {
+      width: 23px;
+      height: 27px;
+    }
   }
 
   &__link {

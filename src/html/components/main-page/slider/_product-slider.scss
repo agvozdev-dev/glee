@@ -78,6 +78,10 @@
     &:active {
       background-color: $active-color;
     }
+
+    &:focus {
+      background-color: $focus-color;
+    }
   }
 
   .slick-dots {
