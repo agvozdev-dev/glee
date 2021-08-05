@@ -32,6 +32,9 @@ $(function () {
 
   function configureFilter(selector) {
     const config = {
+      load: {
+        filter: 'all'
+      },
       controls: {
         scope: 'local'
       }
