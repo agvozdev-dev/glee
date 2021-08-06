@@ -11,6 +11,7 @@
     max-width: 215px;
     margin-right: 84px;
     float: left;
+    font-style: normal;
   }
 
   &__logo {
@@ -19,12 +20,17 @@
   }
 
   &__sections {
+    width: 100%;
+    max-width: 570px;
     display: flex;
-    padding-top: 14px;
   }
 
   &__sections-item {
     width: 100%;
+    
+    &:first-child {
+      margin-right: 30px;
+    }
   }
 
   &__menu-wrapper {
@@ -73,6 +79,12 @@
       color: #414040;
     }
   }
+
+  &__links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+  }
 }
 
 .address {
@@ -84,7 +96,7 @@
     @include truncate-multiline-text(2);
 
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
   }
 
@@ -115,6 +127,8 @@
     max-width: 240px;
     @include truncate-multiline-text(2);
   }
+
+  margin: 0 auto;
 }
 
 .subscribe-form {
