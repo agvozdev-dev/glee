@@ -7,7 +7,7 @@
     color: $footer-text-color;
   }
 
-  &__address {
+  &__contacts {
     max-width: 215px;
     margin-right: 84px;
     float: left;
@@ -17,21 +17,6 @@
   &__logo {
     display: block;
     margin-bottom: 27px;
-  }
-
-  &__sections {
-    width: 100%;
-    max-width: 570px;
-    display: flex;
-    margin-right: 30px;
-  }
-
-  &__sections-item {
-    width: 100%;
-    
-    &:first-child {
-      margin-right: 30px;
-    }
   }
 
   &__menu-wrapper {
@@ -83,16 +68,33 @@
   }
 }
 
+.links {
+  &__list {
+    width: 100%;
+    max-width: 570px;
+    display: flex;
+    margin-right: 30px;
+  }
+
+  &__column {
+    width: 100%;
+    
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+}
+
 .copyright {
   @include truncate-text(350px);
 }
 
-.address {
+.contacts {
   &__title {
     text-transform: uppercase;
   }
 
-  &__part {
+  &__item {
     @include truncate-multiline-text(2);
 
     &:not(:last-child) {
@@ -105,14 +107,9 @@
   }
 }
 
-.section {
+.column {
   &__heading {
-    text-transform: uppercase;
-    @include font('DMSans', 700, 16px);
-    color: #1f2044;
-    margin-bottom: 18px;
-    display: block;
-    @include truncate-text(230px);
+    @include footer-heading();
   }
 
   &__item {
@@ -122,6 +119,10 @@
 }
 
 .subscribe {
+  &__heading {
+    @include footer-heading();
+  }  
+
   &__text {
     margin-bottom: 36px;
     max-width: 240px;

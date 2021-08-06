@@ -1,72 +1,75 @@
 <footer class="footer">
   <div class="container">
+    <h2 class="sr-only">
+      Glee contacts and links 
+    </h2>
 
     <div class="footer__wrapper">
-      <address class="address footer__address">
+      <address class="contacts footer__contacts">
         @@include('../logo/logo.html', { 'extraClasses': 'footer__logo' })
 
-        <div class="address__part">
-          <span class="address__title">Address:</span>
-          <span class="address__value">4772 Wines Lane Houston, TX 77032</span>
+        <div class="contacts__item">
+          <span class="contacts__title">Address:</span>
+          <span class="contacts__value">4772 Wines Lane Houston, TX 77032</span>
         </div>
 
-        <div class="address__part">
-          <span class="address__title">Telephone:</span>
-          <a class="address__link address__value" href="tel:8323475843">
+        <div class="contacts__item">
+          <span class="contacts__title">Telephone:</span>
+          <a class="contacts__link contacts__value" href="tel:8323475843">
             + 832-347-5843
           </a>
         </div>
 
-        <div class="address__part">
-          <span class="address__title">Email:</span>
-          <a class="address__link address__value" href="mailto:contact@Glee.com">contact@Glee.com</a>
+        <div class="contacts__item">
+          <span class="contacts__title">Email:</span>
+          <a class="contacts__link contacts__value" href="mailto:contact@Glee.com">contact@Glee.com</a>
         </div>
       </address>
 
-      <div class="footer__links-wrapper">
-        <ul class="footer__sections">
-          <li class="section footer__sections-item">
-            <span class="section__heading">Services</span>
-            <ul class="section__list">
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">About Us</a>
+      <div class="links footer__links-wrapper">
+        <ul class="links__list">
+          <li class="links__column column">
+            <h3 class="column__heading footer__heading">Services</h3>
+            <ul class="column__list">
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">About Us</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Return Policy</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Return Policy</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Our Blog</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Our Blog</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Contact Us</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Contact Us</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Terms & Condition</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Terms & Condition</a>
               </li>
             </ul>
           </li>
 
-          <li class="section footer__sections-item">
-            <span class="section__heading">Account</span>
-            <ul class="section__list">
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Your Account</a>
+          <li class="links__column column">
+            <h3 class="column__heading">Account</h3>
+            <ul class="column__list">
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Your Account</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Checkout</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Checkout</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Login</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Login</a>
               </li>
-              <li class="section__item">
-                <a class="section__link footer__link" href="#">Register</a>
+              <li class="column__item">
+                <a class="column__link footer__link" href="#">Register</a>
               </li>
             </ul>
           </li>
         </ul>
 
-        <div class="subscribe">
-          <span class="section__heading">Newsletter</span>
+        <div class="footer__subscribe subscribe">
+          <h3 class="subscribe__heading">Newsletter</h3>
           <div class="subscribe__text">
             <p>
               Subscribe by our newsletter and get update protidin.
@@ -83,7 +86,6 @@
           </form>
         </div>
       </div>
-
     </div>
 
     <div class="footer__menu">

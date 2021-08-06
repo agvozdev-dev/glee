@@ -80,6 +80,15 @@
   object-fit: $objectFit;
 }
 
+@mixin footer-heading() {
+  text-transform: uppercase;
+  @include font('DMSans', 700, 16px);
+  color: #1f2044;
+  margin-bottom: 18px;
+  display: block;
+  @include truncate-text(230px);
+}
+
 @mixin r($width) {
   @media only screen and (max-width: $width + "px") {
     @content;
