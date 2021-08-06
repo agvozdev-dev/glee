@@ -23,6 +23,7 @@
     width: 100%;
     max-width: 570px;
     display: flex;
+    margin-right: 30px;
   }
 
   &__sections-item {
@@ -82,7 +83,6 @@
 
   &__links-wrapper {
     display: flex;
-    justify-content: space-between;
     padding-top: 12px;
   }
 }
@@ -127,18 +127,17 @@
     max-width: 240px;
     @include truncate-multiline-text(2);
   }
-
-  margin: 0 auto;
 }
 
 .subscribe-form {
+  display: flex;
+
   &__input {
-    padding: 8px;
+    padding: 8px 8px 8px 16px;
     background-color: $bg-color-2;
     border: none;
-    padding-right: 0;
     transition: background-color 0.3;
-    float: left;
+    max-width: 170px;
 
     &::placeholder {
       @include font('DMSans', 400, 12px);
@@ -156,9 +155,9 @@
     color: #fff;
     padding: 7px 18px 9px;
     @include font('DMSans', 400, 14px);
+    max-width: 100px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: -4px;
     @include truncate-text(102px);
 
     &:hover {
