@@ -60,10 +60,6 @@
     color: inherit;
   }
 
-  &__menu-copyright {
-    @include truncate-text(350px);
-  }
-
   &__link {
     color: inherit;
     transition: color 0.3s;
@@ -85,6 +81,10 @@
     display: flex;
     padding-top: 12px;
   }
+}
+
+.copyright {
+  @include truncate-text(350px);
 }
 
 .address {
