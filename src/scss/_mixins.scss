@@ -89,14 +89,14 @@
   @include truncate-text(230px);
 }
 
-@mixin r($width) {
-  @media only screen and (max-width: $width + "px") {
+@mixin max-width($width) {
+  @media only screen and (max-width: $width) {
     @content;
   }
 }
 
-@mixin rmin($width) {
-  @media only screen and (min-width: $width + "px") {
+@mixin min-width($width) {
+  @media only screen and (min-width: $width) {
     @content;
   }
 }

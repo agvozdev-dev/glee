@@ -1,5 +1,5 @@
 $(function () {
-
+  
   configureSlider('.product-slider');
 
   configurePartnersSlider('.partners-slider');
@@ -9,6 +9,8 @@ $(function () {
   configureFilter('.new-design')
 
   subscribeToEvents();
+
+  disableScroll();
 
   function configureSlider(selector) {
     $(selector).slick({
@@ -53,4 +55,39 @@ $(function () {
       element.addEventListener('mouseout',  () => element.classList.remove(className));
     });
   }
+
+  function disableScroll() {
+    const menuToggles = document.getElementsByClassName('menu__toggle')
+
+    if(menuToggles && menuToggles.length !== 0) {
+      const menuToggle = menuToggles[0]
+
+      menuToggle.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          document.body.style.overflow = 'hidden'
+          document.body.style.position = 'fixed'
+        } else {
+          document.body.style.overflow = ''
+          document.body.style.position = ''
+        }
+      })
+    }
+  }
+
+  // function disableScroll() {
+  //   const menuToggles = document.getElementsByClassName('menu__toggle')
+
+  //   if(menuToggles && menuToggles.length !== 0) {
+  //     const menuToggle = menuToggles[0]
+
+  //     menuToggle.addEventListener('change', (e) => {
+  //       if (e.target.checked) {
+  //         console.log(document.body.style.overflow);
+  //         document.body.style.overflow = 'hidden'
+  //       } else {
+  //         document.body.style.overflow = ''
+  //       }
+  //     })
+  //   }
+  // }
 })

@@ -1,24 +1,25 @@
 .header {
   padding-top: 49px;
-
-  @include r($xl) {
-    padding-top: 32px;
-  }
-
-  @include r($md) {
-    padding-top: 32px;
-  }
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
   margin-bottom: 46px;
   
   &__list {
     display: flex;
     padding-left: 145px;
+
+    @include max-width($xl) {
+      padding-left: 0;
+    }
+
+    @include max-width($lg) {
+      display: none;
+    }
   }
 
   &__item {
@@ -47,6 +48,88 @@
 
     &:hover {
       color: $primary-color;
+    }
+  }
+
+  // input
+  &__toggle {
+    display: block;
+    cursor: pointer;
+    opacity: 0.5;
+
+    width: 40px;
+    height: 32px;
+
+    position: absolute;
+    right: 0;
+    z-index: 4;
+
+    &:checked ~ .menu__btn > span {
+      background: transparent;
+    }
+
+    &:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    &:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:checked ~ .menu__list {
+      display: block;
+      background-color: $bg-color;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  //label
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    right: 10px;
+  
+    width: 26px;
+    height: 26px;
+  
+    cursor: pointer;
+    z-index: 3;
+
+    & > span,
+    & > span::before,
+    & > span::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background-color: #616161;
+      transition-duration: .25s;
+    }
+
+    & > span {
+      top: 10px;
+    }
+
+    & > span::before {
+      top: -10px;
+    }
+    & > span::after {
+      top: 10px;
+    }
+
+    @include max-width($lg) {
+      display: block;
     }
   }
 }
@@ -110,6 +193,10 @@
     &:focus {
       border-color: $color-3;
     }
+  }
+
+  @include max-width($xl) {
+    display: none;
   }
 }
 
@@ -216,6 +303,10 @@
       height: 22px;
       background-image: url('../images/icons/apps.svg');
     }
+
+    @include max-width($xl) {
+      display: none;
+    }
   }
 
   &__count {
@@ -230,4 +321,348 @@
     border-radius: 50%;
     text-align: center;
   }
+
+  @include max-width($lg) {
+    display: none;
+  }
 }
+
+
+// .header {
+//   padding-top: 49px;
+// }
+
+// .menu {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+  
+//   margin-bottom: 46px;
+  
+//   &__list {
+//     display: flex;
+//     padding-left: 145px;
+
+//     @include max-width($xl) {
+//       padding-left: 0;
+//     }
+
+//     @include max-width($lg) {
+//       display: none;
+//     }
+//   }
+
+//   &__item {
+//     &:not(:last-child) {
+//       margin-right: 35px;
+//     }
+//   }
+
+//   &__link {
+//     @include font('Rubik', 500, 15px);
+//     @include truncate-text(90px);
+//     color: $moderate-blue;
+//     position: relative;
+//     transition: color 0.3s;
+//     outline-color: $moderate-blue;
+    
+//     @include underline($primary-color);
+
+//     &:active {
+//       color: #23353d;
+//     }
+
+//     &:focus {
+//       color: #142933;
+//     }
+
+//     &:hover {
+//       color: $primary-color;
+//     }
+//   }
+
+//   // input
+//   &__toggle {
+//     display: block;
+//     cursor: pointer;
+//     opacity: 0;
+
+//     width: 40px;
+//     height: 32px;
+
+//     position: absolute;
+//     top: 39px;
+//     right: 7px;
+//     z-index: 4;
+
+//     &:checked,
+//     &:checked ~ .menu__btn {
+//       position: fixed;
+//     }
+
+//     &:checked ~ .menu__btn > span {
+//       position: fixed;
+//       transform: rotate(45deg);
+//     }
+
+//     &:checked ~ .menu__btn > span::before {
+//       position: fixed;
+//       transform: rotate(0);
+//     }
+
+//     &:checked ~ .menu__btn > span::after {
+//       position: fixed;
+//       transform: rotate(90deg);
+//     }
+
+//     &:checked ~ .menu__list {
+//       display: block;
+//       background-color: $bg-color;
+
+//       margin: 0;
+      
+//       position: fixed;
+//       left: 0;
+//       right: 0;
+//       top: 0;
+//       bottom: 0;
+//       z-index: 2;
+//     }
+//   }
+
+//   //label
+//   &__btn {
+//     display: flex;
+//     align-items: center;
+
+//     position: absolute;
+//     top: 39px;
+//     right: 15px;
+  
+//     width: 26px;
+//     height: 26px;
+  
+//     cursor: pointer;
+//     z-index: 3;
+
+//     & > span,
+//     & > span::before,
+//     & > span::after {
+//       content: '';
+//       display: block;
+//       position: absolute;
+//       width: 26px;
+//       height: 3px;
+//       background-color: #616161;
+//       transition-duration: .25s;
+//     }
+
+//     & > span {
+//       top: 17px;
+//     }
+
+//     & > span::before {
+//       top: -10px;
+//     }
+//     & > span::after {
+//       top: 11px;
+//     }
+
+//     @include max-width($lg) {
+//       display: block;
+//     }
+//   }
+// }
+
+// .search-form {
+//   position: relative;
+//   margin-right: 20px;
+
+//   &__btn{
+//     display: none;
+//   }
+
+//   &__btn:checked ~ .search-form__input {
+//     opacity: 1;
+//   }
+
+//   &__label {
+//     border-radius: 50%;
+//     display: block;
+//     padding: 25px;
+//     background-color: $color-7;
+//     transition: background-color 0.3s;
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: $color-3;
+//     }
+
+//     &:active {
+//       background-color: $user-interact-active;
+//     }
+
+//     &:focus {
+//       background-color: #50a4d1;
+//     }
+
+//     &:active .icon {
+//       @extend %icon-active-effect;
+//     }
+
+//     &:focus .icon {
+//       @extend %icon-focus-effect;
+//     }
+
+//     &:hover .icon {
+//       @extend %icon-hover-effect;
+//     }
+//   }
+
+//   &__input {
+//     opacity: 0;
+//     border-radius: 30px;
+//     padding: 14px;
+//     position: absolute;
+//     transform: translateX(-100%);
+//     left: -10px;
+//     top: 0;
+//     border: 1px solid $color-7;
+//     transition: opacity 0.3s, border-color 0.3s;
+
+//     &:focus {
+//       border-color: $color-3;
+//     }
+//   }
+
+//   @include max-width($xl) {
+//     display: none;
+//   }
+// }
+
+// .search-icon,
+// .cart-icon,
+// .heart-icon {
+//   fill: $blue-icon-color;
+//   width: 20px;
+//   height: 20px;
+// }
+
+// .user-nav {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+  
+//   &__wrapper {
+//     height: 100%;
+//     display: flex;
+//     margin-right: 18px;
+//   }
+
+//   &__link {
+//     position: relative;
+//     padding: 20px 33px 0 33px;
+//     background-color: $bg-color;
+//     transition: background-color 0.3s;
+    
+//     &:first-child {
+//       border-top-left-radius: $user-nav-border-radius;
+//       border-bottom-left-radius: $user-nav-border-radius;
+
+//       &::after {
+//         @include divider();
+//         right: 0;
+//       }
+//     }
+
+//     &:last-child {
+//       border-top-right-radius: $user-nav-border-radius;
+//       border-bottom-right-radius: $user-nav-border-radius;
+
+//       &::before {
+//         @include divider();
+//         left: 0;
+//       }
+//     }
+
+//     &:hover {
+//       background-color: $bg-color-3;
+//     }
+
+//     &:active {
+//       background-color: #fccba0;;
+//     }
+
+//     &:focus {
+//       background-color: #fcbb82;;
+//     }
+
+//     &:active > svg {
+//       fill: #c4d7e0;
+//     }
+
+//     &:focus > svg {
+//       fill: #a4bdca;
+//     }
+
+//     &:hover > svg {
+//       fill: #fff;
+//     }
+//   }
+
+//   &__icon {
+//     fill: $dark-icon-color;
+//     transition: fill 0.3s;
+//     width: 22px;
+//     height: 20px;
+//   }
+
+//   &__apps {
+//     border-radius: 50%;
+//     background-color: $color-3;
+//     padding: 25px;
+//     transition: background-color 0.3s;
+
+//     &:active {
+//       background-color: #add0e2;
+//     }
+
+//     &:focus {
+//       background-color: #92b1c2;
+//     }
+
+//     &:hover {
+//       background-color: #7095a9;
+//     }
+
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       transform: translate(-50%, -50%);
+//       width: 21px;
+//       height: 22px;
+//       background-image: url('../images/icons/apps.svg');
+//     }
+
+//     @include max-width($xl) {
+//       display: none;
+//     }
+//   }
+
+//   &__count {
+//     @include font('DMSans', 400, 10px);
+//     line-height: 1.7;
+//     position: absolute;
+//     top: 12px;
+//     right: 25px;
+//     width: 16px;
+//     height: 16px;
+//     background-color: #fff;
+//     border-radius: 50%;
+//     text-align: center;
+//   }
+
+//   @include max-width($lg) {
+//     display: none;
+//   }
+// }
