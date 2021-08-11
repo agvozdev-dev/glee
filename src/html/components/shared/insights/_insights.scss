@@ -4,18 +4,35 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 252px;
+
+    @include max-width($xl) {
+      margin-bottom: 30px;
+      padding-top: 30px;
+      flex-direction: column;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
     display: inline-block;
+
+    @include max-width($xl) {
+      text-align: center;
+      margin-bottom: 0;
+    }
   }
 }
 
 .view-all {
+  text-align: right;
+
   &__wrapper {
     position: relative;
     @include underline(#000);
+
+    @include max-width($xl) {
+      display: inline-block;
+    }
   }  
 
   &__link {
@@ -49,15 +66,33 @@
   display: flex;
   justify-content: space-between;
 
+  @include max-width($xl) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__item {
     max-width: 370px;
     margin-top: -250px;
     border-radius: 5px;
     overflow: hidden;
+
+    @include max-width($xl) {
+      margin-top: 0;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
   }
 }
 
 .insight-card {
+  @include max-width($xl) {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
   &__content {
     position: relative;
     background-color: #fff;
@@ -75,6 +110,10 @@
     border-radius: 25px;
     @include truncate-text(102px);
     transition: background-color 0.3s;
+
+    @include max-width($xl) {
+      margin: -53px auto 20px auto;
+    }
 
     &:hover {
       background-color: $hover-color;
@@ -104,10 +143,18 @@
 
   &__signature {
     display: flex;
+
+    @include max-width($sm) {
+      flex-wrap: wrap;
+    }
   }
 
   &__image {
     @include fixed-image-size(370px, 250px, cover);
+
+    @include max-width($xl) {
+      margin: 0 auto;
+    }
   }
 
   &__date {
@@ -130,4 +177,8 @@
 .insights-gallery {
   background-color: $bg-color-2;
   height: 185px;
+
+  @include max-width($xl) {
+    background-color: #fff;
+  }
 }
