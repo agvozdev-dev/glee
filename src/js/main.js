@@ -1,5 +1,5 @@
 $(function () {
-  
+
   configureSlider('.product-slider');
 
   configurePartnersSlider('.partners-slider');
@@ -52,21 +52,49 @@ $(function () {
       const className = 'products-gallery__item--active'
 
       element.addEventListener('mouseover', () => element.classList.add(className));
-      element.addEventListener('mouseout',  () => element.classList.remove(className));
+      element.addEventListener('mouseout', () => element.classList.remove(className));
     });
   }
 
   function menu() {
-    const menuBtn  = document.querySelector('.menu__btn')
-    const menuList = document.querySelector('.menu__list')
+    const menuBtn = document.querySelector('.menu__btn')
 
     if (menuBtn) {
       menuBtn.addEventListener('click', function () {
-        document.body.classList.toggle('body--lock')
-        menuBtn.classList.toggle('menu__btn--active')
-        menuList.classList.toggle('menu__list--active')
+        toggleBodyLock()
+        toggleMenuBtnActive()
+        toggleMenuListActive()
       })
     }
+  }
+
+  function toggleBodyLock() {
+    document.body.classList.toggle('body--lock')
+  }
+
+  function toggleMenuBtnActive() {
+    const menuBtn = document.querySelector('.menu__btn')
+    if (menuBtn) {
+      menuBtn.classList.toggle('menu__btn--active')
+    }
+  }
+
+  function toggleMenuListActive() {
+    const menuList = document.querySelector('.menu__list')
+    if (menuList) {
+      menuList.classList.toggle('menu__list--active')
+    }
+  }
+
+  const menuLinks = document.querySelectorAll('.menu__link')
+  if (menuLinks && menuLinks.length > 1) {
+    menuLinks.forEach(menuLink => {
+      menuLink.addEventListener('click', function () {
+        toggleBodyLock()
+        toggleMenuBtnActive()
+        toggleMenuListActive()
+      })
+    })
   }
 })
 
