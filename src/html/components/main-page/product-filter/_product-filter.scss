@@ -3,9 +3,17 @@
   justify-content: center;
   margin-bottom: 75px;
 
+  @include max-width($md) {
+    flex-wrap: wrap;
+  }
+
   &__item {
     &:not(:last-child){
       margin-right: 30px;
+    }
+
+    @include max-width($md) {
+      margin-bottom: 15px;
     }
   }
 
@@ -25,6 +33,8 @@
       color: #272626;
     }
   }
+
+
 }
 
 .mixitup-control-active {

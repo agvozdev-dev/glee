@@ -46,6 +46,10 @@ a {
   &--left {
     text-align: left;
   }
+
+  @include max-width($md) {
+    font-size: 26px;
+  }
 }
 
 .icon {
