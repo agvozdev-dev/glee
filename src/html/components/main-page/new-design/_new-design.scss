@@ -3,7 +3,12 @@
   
   &--offset {
     padding-top: 98px;
-    padding-bottom: 85px;
+    margin-bottom: 85px;
+
+    @include max-width($md) {
+      margin-bottom: 15px; 
+      padding-top: 30px;
+    }
   }
 
   &__title {
@@ -14,6 +19,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: -36px;
+
+    @include max-width($xl) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -28,6 +37,7 @@
   &__content {
     padding: 37px 0 0 37px;
   }
+
 }
 
 .new-design-card {
@@ -60,10 +70,18 @@
   &__image {
     margin: -55px 0 0 auto;
     @include fixed-image-size(271px, 180px, contain);
+
+    @include max-width($sm) {
+      margin: 0 0 0 auto;
+    }
   }
 
   &__image--shifted {
     margin: -62px 55px 0 auto;
     @include fixed-image-size(112px, 143px, contain);
+
+    @include max-width($sm) {
+      margin: 0 55px 0 auto;
+    }
   }
 }

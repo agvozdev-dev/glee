@@ -5,6 +5,7 @@
 
   @include max-width($md) {
     flex-wrap: wrap;
+    margin-bottom: 35px;
   }
 
   &__item {

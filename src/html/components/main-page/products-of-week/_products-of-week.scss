@@ -3,6 +3,10 @@
 
   &--offset {
     padding-top: 65px;
+
+    @include max-width($md) {
+      padding-top: 30px;
+    }
   }
 
   &__wrapper {
