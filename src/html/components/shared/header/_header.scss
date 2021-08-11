@@ -76,6 +76,8 @@
       padding-top: 50px;
       font-size: 34px;
       color: #fff;
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -104,7 +106,7 @@
     @include max-width($lg) {
       font-size: 34px;
       color: #fff;
-      @include truncate-text(150px);
+      @include truncate-text(100%);
     }
   }
 
@@ -149,7 +151,7 @@
       width: 36px;
       height: 4px;
       background-color: $moderate-blue;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.3s;
     }
 
     &::before {
@@ -158,6 +160,20 @@
 
     &::after {
       bottom: 3px;
+    }
+
+    &--active .menu__icon {
+      visibility: hidden;
+    }
+
+    &--active::before {
+      transform: rotate(45deg);
+      top: 15px;
+    }
+
+    &--active::after {
+      bottom: 17px;
+      transform: rotate(-45deg);
     }
 
     @include max-width($lg) {
