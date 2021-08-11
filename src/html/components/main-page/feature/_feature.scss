@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     background-color: $bg-color-2;
+
+    @include max-width($lg) {
+      flex-direction: column;
+    }
   }
 
   &__wrapper {
@@ -42,6 +46,11 @@
     
     &:not(:last-child) {
       border-right: 1px solid #e8e4df;
+
+      @include max-width($lg) {
+        border-right: none;
+        border-bottom: 1px solid #e8e4df;
+      }
     }
   }
 

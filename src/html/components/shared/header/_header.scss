@@ -1,5 +1,31 @@
 .header {
   padding-top: 49px;
+  margin-bottom: 46px;
+
+  &__logo {
+    position: relative;
+    z-index: 1003;
+  }
+
+  @include max-width($lg) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    padding: 15px 0;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: #fff;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1002;
+    }
+  }
 }
 
 .menu {
@@ -7,36 +33,61 @@
   align-items: center;
   justify-content: space-between;
   
-  margin-bottom: 46px;
-  
   &__list {
     display: flex;
     padding-left: 145px;
+    transition: left 0.3s;
 
     @include max-width($xl) {
       padding-left: 0;
     }
 
     @include max-width($lg) {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: $bg-color-3;
+      padding: 100px 30px 30px 30px;
+      overflow: auto;
     }
+  }
+
+  &__list--active {
+    left: 0;
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 35px;
+
+      @include max-width($lg) {
+        margin-right: 0;
+      }
+    }
+
+    @include max-width($lg) {
+      padding-top: 50px;
+      font-size: 34px;
+      color: #fff;
     }
   }
 
   &__link {
     @include font('Rubik', 500, 15px);
     @include truncate-text(90px);
+    @include underline($primary-color);
+
     color: $moderate-blue;
     position: relative;
     transition: color 0.3s;
     outline-color: $moderate-blue;
-    
-    @include underline($primary-color);
 
     &:active {
       color: #23353d;
@@ -49,83 +100,64 @@
     &:hover {
       color: $primary-color;
     }
+
+    @include max-width($lg) {
+      font-size: 34px;
+      color: #fff;
+      @include truncate-text(150px);
+    }
   }
 
-  // input
-  &__toggle {
-    display: block;
-    cursor: pointer;
-    opacity: 0.5;
+  &__btn {
+    display: none;
 
-    width: 40px;
-    height: 32px;
+    position: relative;
+    z-index: 1002;
 
-    position: absolute;
-    right: 0;
-    z-index: 4;
+    width: 36px;
+    height: 36px;
 
-    &:checked ~ .menu__btn > span {
-      background: transparent;
+    &:hover .menu__icon,
+    &:hover::before,
+    &:hover::after {
+      background-color: #365766;
     }
 
-    &:checked ~ .menu__btn > span::before {
-      top: 0;
-      transform: rotate(-45deg);
+    &:focus .menu__icon,
+    &:focus::before,
+    &:focus::after {
+      background-color: #294e5f;
     }
 
-    &:checked ~ .menu__btn > span::after {
-      top: 0;
-      transform: rotate(45deg);
+    &:active .menu__icon,
+    &:active::before,
+    &:active::after {
+      background-color: #1b4558;
     }
 
-    &:checked ~ .menu__list {
-      display: block;
-      background-color: $bg-color;
+    & .menu__icon {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
 
+    & .menu__icon,
+    &::before,
+    &::after {
       position: absolute;
       left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 2;
-    }
-  }
-
-  //label
-  &__btn {
-    display: flex;
-    align-items: center;
-
-    position: absolute;
-    right: 10px;
-  
-    width: 26px;
-    height: 26px;
-  
-    cursor: pointer;
-    z-index: 3;
-
-    & > span,
-    & > span::before,
-    & > span::after {
       content: '';
-      display: block;
-      position: absolute;
-      width: 26px;
-      height: 3px;
-      background-color: #616161;
-      transition-duration: .25s;
+      width: 36px;
+      height: 4px;
+      background-color: $moderate-blue;
+      transition: background-color 0.3s;
     }
 
-    & > span {
-      top: 10px;
+    &::before {
+      top: 3px;
     }
 
-    & > span::before {
-      top: -10px;
-    }
-    & > span::after {
-      top: 10px;
+    &::after {
+      bottom: 3px;
     }
 
     @include max-width($lg) {
@@ -326,7 +358,6 @@
     display: none;
   }
 }
-
 
 // .header {
 //   padding-top: 49px;

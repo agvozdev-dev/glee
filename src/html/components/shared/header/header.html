@@ -1,13 +1,12 @@
 <header class="header">
-  <div class="container container--large">
+  <div class="container container--large header__container">
     <nav class="menu">
 
       @@include('../logo/logo.html', { 'extraClasses': 'header__logo', 'webRoot': '.' })
 
-      <input class="menu__toggle" type="checkbox" />
-      <label class="menu__btn" for="menu__toggle">
-        <span></span>
-      </label>
+      <button class="menu__btn" type="button">
+        <span class="menu__icon"></span>
+      </button>
 
       <ul class="menu__list">
         <li class="menu__item">

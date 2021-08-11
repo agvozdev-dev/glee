@@ -10,7 +10,7 @@ $(function () {
 
   subscribeToEvents();
 
-  disableScroll();
+  menu();
 
   function configureSlider(selector) {
     $(selector).slick({
@@ -56,38 +56,17 @@ $(function () {
     });
   }
 
-  function disableScroll() {
-    const menuToggles = document.getElementsByClassName('menu__toggle')
+  function menu() {
+    const menuBtn  = document.querySelector('.menu__btn')
+    const menuList = document.querySelector('.menu__list')
 
-    if(menuToggles && menuToggles.length !== 0) {
-      const menuToggle = menuToggles[0]
-
-      menuToggle.addEventListener('change', (e) => {
-        if (e.target.checked) {
-          document.body.style.overflow = 'hidden'
-          document.body.style.position = 'fixed'
-        } else {
-          document.body.style.overflow = ''
-          document.body.style.position = ''
-        }
+    if (menuBtn) {
+      menuBtn.addEventListener('click', function () {
+        document.body.classList.toggle('body--lock')
+        menuBtn.classList.toggle('menu__btn--active')
+        menuList.classList.toggle('menu__list--active')
       })
     }
   }
-
-  // function disableScroll() {
-  //   const menuToggles = document.getElementsByClassName('menu__toggle')
-
-  //   if(menuToggles && menuToggles.length !== 0) {
-  //     const menuToggle = menuToggles[0]
-
-  //     menuToggle.addEventListener('change', (e) => {
-  //       if (e.target.checked) {
-  //         console.log(document.body.style.overflow);
-  //         document.body.style.overflow = 'hidden'
-  //       } else {
-  //         document.body.style.overflow = ''
-  //       }
-  //     })
-  //   }
-  // }
 })
+

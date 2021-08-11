@@ -19,6 +19,10 @@ body {
   color: $primary-color;
 }
 
+.body.body--lock {
+  overflow: hidden;
+}
+
 a {
   cursor: pointer;
 }
