@@ -1,10 +1,17 @@
 .footer {
   &__wrapper {
+    display: flex;
+    
     padding: 80px 0 60px;
     border-bottom: 1px solid #dae4e9;
     @include font('Rubik', 400, 14px, normal);
     line-height: 1.6;
     color: $footer-text-color;
+
+    @include max-width($lg) {
+      flex-wrap: wrap;
+      padding: 30px 0;
+    }
   }
 
   &__contacts {
@@ -12,6 +19,10 @@
     margin-right: 84px;
     float: left;
     font-style: normal;
+
+    @include max-width($lg) {
+      margin: 0 auto 20px auto;
+    }
   }
 
   &__logo {
@@ -28,6 +39,10 @@
 
   &__menu-list {
     display: flex;
+
+    @include max-width($md) {
+      display: none;
+    }
   }
 
   &__menu-item {
@@ -64,7 +79,17 @@
 
   &__links-wrapper {
     display: flex;
+    justify-content: space-between;
     padding-top: 12px;
+    margin: 0 auto;
+
+    @include max-width($md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__subscribe {
+    margin: 0 auto;
   }
 }
 
@@ -74,6 +99,10 @@
     max-width: 570px;
     display: flex;
     margin-right: 30px;
+
+    @include max-width($sm) {
+      flex-wrap: wrap;
+    }
   }
 
   &__column {
@@ -81,12 +110,32 @@
     
     &:first-child {
       margin-right: 30px;
+
+      @include max-width($lg) {
+        margin-right: 0;
+      }
     }
+
+    @include max-width($lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include max-width($lg) {
+    text-align: center;
   }
 }
 
 .copyright {
   @include truncate-text(350px);
+
+  p {
+    word-break: break-all;
+  }
+
+  @include max-width($md) {
+    margin: 0 auto;
+  }
 }
 
 .contacts {
@@ -110,17 +159,29 @@
 .column {
   &__heading {
     @include footer-heading();
+
+    @include max-width($lg) {
+      margin: 0 auto 15px auto;
+    }
   }
 
   &__item {
     margin-bottom: 10px;
     @include truncate-text(230px);
+
+    @include max-width($lg) {
+      margin: 0 auto 10px auto;
+    }
   }
 }
 
 .subscribe {
   &__heading {
     @include footer-heading();
+
+    // @include max-width($lg) {
+    //   margin: 0 auto;
+    // }
   }  
 
   &__text {
