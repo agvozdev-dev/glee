@@ -21,6 +21,8 @@ $(function () {
     });
   }
 
+  window.addEventListener("resize", () => slickSetOption('.partners-slider'), true);
+
   function configurePartnersSlider(selector) {
     $(selector).slick({
       infinite: true,
@@ -30,6 +32,16 @@ $(function () {
       slidesToShow: 5,
       slidesToScroll: 1,
     });
+  }
+
+  function slickSetOption(selector) {
+    let slidesToShow = window.innerWidth < 576
+      ? 1
+      : window.innerWidth < 768
+        ? 2
+        : 5
+
+    $(selector).slick('slickSetOption', 'slidesToShow', slidesToShow);
   }
 
   function configureFilter(selector) {

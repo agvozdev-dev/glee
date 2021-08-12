@@ -9,5 +9,6 @@
 
   &__image {
     @include fixed-image-size(120px, 80px, contain);
+    margin: 0 auto;
   }
 }

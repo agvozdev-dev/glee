@@ -180,5 +180,6 @@
 
   @include max-width($xl) {
     background-color: #fff;
+    height: auto;
   }
 }
