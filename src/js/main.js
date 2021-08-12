@@ -24,24 +24,28 @@ $(function () {
   window.addEventListener("resize", () => slickSetOption('.partners-slider'), true);
 
   function configurePartnersSlider(selector) {
+    let slidesToShow = getPartnersSlidesToShow()
+
     $(selector).slick({
       infinite: true,
       autoplay: true,
       arrows: false,
       dots: false,
-      slidesToShow: 5,
+      slidesToShow: slidesToShow,
       slidesToScroll: 1,
     });
   }
 
   function slickSetOption(selector) {
-    let slidesToShow = window.innerWidth < 576
+    $(selector).slick('slickSetOption', 'slidesToShow', getPartnersSlidesToShow());
+  }
+
+  function getPartnersSlidesToShow() {
+    return window.innerWidth < 768
       ? 1
-      : window.innerWidth < 768
+      : window.innerWidth < 1200
         ? 2
         : 5
-
-    $(selector).slick('slickSetOption', 'slidesToShow', slidesToShow);
   }
 
   function configureFilter(selector) {
