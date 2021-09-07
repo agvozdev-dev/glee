@@ -35,6 +35,12 @@
   transform: translate(-50%, -50%);
   transition: opacity 0.3s;
 
+  @include max-width($lg) {
+    opacity: 1;
+    top: 60%;
+    transform: translateX(-50%);
+  }
+
   &__item {
     cursor: pointer;
     position: relative;
