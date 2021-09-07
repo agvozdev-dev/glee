@@ -30,13 +30,13 @@
 
     &--delivery::before {
       background-image: url('../images/icons/delivery.svg');
-      width: 54px;
+      width: 54px; //вынести к родителю, а у первого будет переопределен
       height: 36px;
     }
 
     &--payment::before {
       background-image: url('../images/icons/payment.svg');
-      width: 54px;
+      width: 54px; //вынести к родителю
       height: 52px;
     }
   }

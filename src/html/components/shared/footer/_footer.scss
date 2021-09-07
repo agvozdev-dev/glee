@@ -48,12 +48,12 @@
   &__menu-item {
     @include truncate-text(80px);
     color: $footer-text-color;
-  }
 
-  &__menu-item:not(:last-child) {
-    margin-right: 18px;
-    padding-right: 10px;
-    border-right: 2px solid $footer-text-color;
+    &:not(:last-child) {
+      margin-right: 18px;
+      padding-right: 10px;
+      border-right: 2px solid $footer-text-color;
+    }
   }
 
   &__menu-link {
