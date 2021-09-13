@@ -115,16 +115,16 @@
       margin: -53px auto 20px auto;
     }
 
+    &:focus {
+      background-color: $focus-color;
+    }
+
     &:hover {
       background-color: $hover-color;
     }
 
     &:active {
       background-color: $active-color;
-    }
-
-    &:focus {
-      background-color: $focus-color;
     }
   }
 

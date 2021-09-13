@@ -64,16 +64,16 @@
     color: inherit;
     transition: color 0.3s;
 
+    &:focus {
+      color: #414040;
+    }
+
     &:hover {
       color: #4d4c4c;
     }
 
     &:active {
       color: #000;
-    }
-
-    &:focus {
-      color: #414040;
     }
   }
 
@@ -215,16 +215,16 @@
     transition: background-color 0.3s;
     @include truncate-text(102px);
 
+    &:focus {
+      background-color: $focus-color;
+    } 
+
     &:hover {
       background-color: $hover-color;
     }
 
     &:active {
       background-color: $active-color;
-    } 
-
-    &:focus {
-      background-color: $focus-color;
     } 
   }
 }

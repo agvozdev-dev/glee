@@ -152,6 +152,12 @@
       } 
     }
 
+    &:focus {
+      border: 1px solid #353837;
+      background-color: #fa9843;
+      color: #fff;
+    }
+
     &:hover {
       border: 1px solid #969c99;
       background-color: #f9ae6c;
@@ -161,12 +167,6 @@
     &:active {
       border: 1px solid #3e4240;
       background-color: #f8a054;
-      color: #fff;
-    }
-
-    &:focus {
-      border: 1px solid #353837;
-      background-color: #fa9843;
       color: #fff;
     }
   }

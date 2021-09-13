@@ -104,16 +104,16 @@
     color: #fff;
     transition: background-color 0.3s;
 
+    &:focus {
+      background-color: $focus-color;
+    }
+
     &:hover {
       background-color: $hover-color;
     }
 
     &:active {
       background-color: $active-color;
-    }
-
-    &:focus {
-      background-color: $focus-color;
     }
 
     @include max-width($lg) {
@@ -140,12 +140,12 @@
         @include font('Rubik', 400, 11px);
         transition: background-color 0.3s;
   
-        &:hover {
-          background-color: #f5a560;
-        }
-  
         &:focus {
           background-color: #e78732;
+        }
+
+        &:hover {
+          background-color: #f5a560;
         }
 
         &:active {

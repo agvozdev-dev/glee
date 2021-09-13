@@ -4,10 +4,6 @@
 
       @@include('../logo/logo.html', { 'extraClasses': 'header__logo', 'webRoot': '.' })
 
-      <button class="menu__btn" type="button">
-        <span class="menu__icon"></span>
-      </button>
-
       <ul class="menu__list">
         <li class="menu__item">
           <a class="menu__link" href="#">Home<span>+</span></a>
@@ -65,6 +61,11 @@
           <span class="sr-only">Button to open applications menu</span>
         </button>
       </div>
+
+      <button class="menu__btn" type="button">
+        <span class="sr-only">Mobile screen menu button</span>
+        <span class="menu__icon"></span>
+      </button>
 
     </nav>
   </div>

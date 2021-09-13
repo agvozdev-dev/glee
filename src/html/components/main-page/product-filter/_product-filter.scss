@@ -22,12 +22,12 @@
     color: #8b8b8b;
     transition: color 0.3s;
     
-    &:hover {
-      color: #575656;
-    }
-
     &:focus {
       color: #464545;
+    }
+
+    &:hover {
+      color: #575656;
     }
 
     &:active {

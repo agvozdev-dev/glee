@@ -39,6 +39,10 @@
     padding-left: 145px;
     transition: left 0.3s;
 
+    &--active {
+      left: 0;
+    }
+
     @include max-width($xl) {
       padding-left: 0;
     }
@@ -58,11 +62,6 @@
       padding: 100px 30px 30px 30px;
       overflow: auto;
     }
-  }
-
-  // перенести в лист
-  &__list--active {
-    left: 0;
   }
 
   &__item {
@@ -93,16 +92,16 @@
     transition: color 0.3s;
     outline-color: $moderate-blue;
 
-    &:active {
-      color: #23353d;
-    }
-
     &:focus {
       color: #142933;
     }
 
     &:hover {
       color: $primary-color;
+    }
+
+    &:active {
+      color: #23353d;
     }
 
     @include max-width($lg) {
@@ -121,16 +120,16 @@
     width: 36px;
     height: 36px;
 
-    &:hover .menu__icon,
-    &:hover::before,
-    &:hover::after {
-      background-color: #365766;
-    }
-
     &:focus .menu__icon,
     &:focus::before,
     &:focus::after {
       background-color: #294e5f;
+    }
+
+    &:hover .menu__icon,
+    &:hover::before,
+    &:hover::after {
+      background-color: #365766;
     }
 
     &:active .menu__icon,
@@ -204,6 +203,10 @@
     transition: background-color 0.3s;
     cursor: pointer;
 
+    &:focus {
+      background-color: #50a4d1;
+    }
+
     &:hover {
       background-color: $color-3;
     }
@@ -212,11 +215,7 @@
       background-color: $user-interact-active;
     }
 
-    &:focus {
-      background-color: #50a4d1;
-    }
-
-    &:active .icon {
+&:active .icon {
       @extend %icon-active-effect;
     }
 
@@ -262,6 +261,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1002;
   
   &__wrapper {
     height: 100%;
@@ -295,6 +295,10 @@
       }
     }
 
+    &:focus {
+      background-color: #fcbb82;;
+    }
+
     &:hover {
       background-color: $bg-color-3;
     }
@@ -303,20 +307,16 @@
       background-color: #fccba0;;
     }
 
-    &:focus {
-      background-color: #fcbb82;;
-    }
-
-    &:active > svg {
-      fill: #c4d7e0;
-    }
-
     &:focus > svg {
       fill: #a4bdca;
     }
 
     &:hover > svg {
       fill: #fff;
+    }
+
+    &:active > svg {
+      fill: #c4d7e0;
     }
   }
 
@@ -334,16 +334,16 @@
     padding: 25px;
     transition: background-color 0.3s;
 
-    &:active {
-      background-color: #add0e2;
-    }
-
     &:focus {
       background-color: #92b1c2;
     }
 
     &:hover {
       background-color: #7095a9;
+    }
+
+    &:active {
+      background-color: #add0e2;
     }
 
     &::before {
@@ -374,6 +374,10 @@
   }
 
   @include max-width($lg) {
-    display: none;
+    
   }
+
+  // @include max-width($lg) {
+  //   display: none;
+  // }
 }
