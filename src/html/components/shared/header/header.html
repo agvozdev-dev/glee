@@ -4,68 +4,85 @@
 
       @@include('../logo/logo.html', { 'extraClasses': 'header__logo', 'webRoot': '.' })
 
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Home<span>+</span></a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">About</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Services</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Pages<span>+</span></a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">News</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Contact</a>
-        </li>
-      </ul>
+      <div class="menu__wrapper">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Home<span>+</span></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Services</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Pages<span>+</span></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">News</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Contact</a>
+          </li>
+        </ul>
 
-      <div class="user-nav">
-        <form class="search-form">
-          <label class="search-form__label" for="search-form-btn">
-            <span class="sr-only">Search icon</span>
+        <form class="search-form menu__search-form" id="search-form">
+          <label class="search-form__input-label" for="search-form-input"></label>
+          <input class="search-form__input" id="search-form-input" form="search-form" type="search" name="search-input"
+            placeholder="Search...">
+
+          <button class="search-form__submit-btn" type="submit">
             <svg class="search-icon icon">
               <use xlink:href="@@webRoot/images/sprite.svg#search"></use>
             </svg>
-          </label>
-          <input class="search-form__btn" type="checkbox" name="search-checkbox" id="search-form-btn">
-
-          <label class="search-form__input-label" for="search-form-input"></label>
-          <input class="search-form__input" id="search-form-input" type="search" name="search-input"
-            placeholder="Search...">
+          </button>
+          
+          <button class="search-form__reset-btn" type="reset">
+            <svg class="search-icon icon">
+              <use xlink:href="@@webRoot/images/sprite.svg#clear"></use>
+            </svg>
+          </button>
         </form>
 
-        <div class="user-nav__wrapper">
-          <a class="user-nav__link" href="#">
-            <span class="sr-only">Link to favorite products</span>
-            <svg class="user-nav__icon">
-              <use xlink:href="@@webRoot/images/sprite.svg#heart"></use>
+        <button class="search-cancel-btn" type="button">
+          Cancel
+        </button>
+  
+        <div class="user-nav">
+          <button class="search-btn">
+            <span class="sr-only">Search button</span>
+            <svg class="search-icon icon">
+              <use xlink:href="@@webRoot/images/sprite.svg#search"></use>
             </svg>
-            <span class="user-nav__count">7</span>
-          </a>
-          <a class="user-nav__link user-nav__link--cart" href="#">
-            <span class="sr-only">Link to cart</span>
-            <svg class="user-nav__icon">
-              <use xlink:href="@@webRoot/images/sprite.svg#cart"></use>
-            </svg>
-            <span class="user-nav__count">2</span>
-          </a>
-        </div>
+          </button>
 
-        <button class="user-nav__apps" type="button">
-          <span class="sr-only">Button to open applications menu</span>
+          <div class="user-nav__wrapper">
+            <a class="user-nav__link" href="#">
+              <span class="sr-only">Link to favorite products</span>
+              <svg class="user-nav__icon">
+                <use xlink:href="@@webRoot/images/sprite.svg#heart"></use>
+              </svg>
+              <span class="user-nav__count">7</span>
+            </a>
+            <a class="user-nav__link user-nav__link--cart" href="#">
+              <span class="sr-only">Link to cart</span>
+              <svg class="user-nav__icon">
+                <use xlink:href="@@webRoot/images/sprite.svg#cart"></use>
+              </svg>
+              <span class="user-nav__count">2</span>
+            </a>
+          </div>
+  
+          <button class="user-nav__apps" type="button">
+            <span class="sr-only">Button to open applications menu</span>
+          </button>
+        </div>
+  
+        <button class="menu__btn" type="button">
+          <span class="sr-only">Mobile screen menu button</span>
+          <span class="menu__icon"></span>
         </button>
       </div>
-
-      <button class="menu__btn" type="button">
-        <span class="sr-only">Mobile screen menu button</span>
-        <span class="menu__icon"></span>
-      </button>
 
     </nav>
   </div>

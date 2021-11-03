@@ -5,6 +5,16 @@
   &__logo {
     position: relative;
     z-index: 1003;
+
+    // значения явно задаются в html для логотипа. они ддолжны совпадать
+    min-width: 146px;
+    height: 39px;
+
+    @include max-width($lg) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @include max-width($lg) {
@@ -33,14 +43,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
   
+  &__search-form {
+    margin-right: 15px;
+  }
+
   &__list {
     display: flex;
-    padding-left: 145px;
+    margin: 0 auto;
+    padding-left: 155px;
     transition: left 0.3s;
 
-    &--active {
-      left: 0;
+    &--hidden {
+      display: none;
     }
 
     @include max-width($xl) {
@@ -61,6 +85,10 @@
       background-color: $bg-color-3;
       padding: 100px 30px 30px 30px;
       overflow: auto;
+
+      &--active {
+        left: 0;
+      }
     }
   }
 
@@ -183,61 +211,85 @@
   }
 }
 
+.search-btn {
+  display: block;
+  position: relative;
+  background-color: $color-7;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+  padding: 25px;
+  width: 22px;
+  height: 22px;
+  margin-right: 22px;
+
+  &:focus {
+    background-color: #50a4d1;
+  }
+
+  &:hover {
+    background-color: $color-3;
+  }
+
+  &:active {
+    background-color: $user-interact-active;
+  }
+
+  &:active .icon {
+    @extend %icon-active-effect;
+  }
+
+  &:focus .icon {
+    @extend %icon-focus-effect;
+  }
+
+  &:hover .icon {
+    @extend %icon-hover-effect;
+  }
+}
+
+
+// ---------------------------------------------------- SEARCH FORM
+
+
 .search-form {
   position: relative;
-  margin-right: 20px;
+  display: none;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  &__btn{
-    display: none;
-  }
-
-  &__btn:checked ~ .search-form__input {
-    opacity: 1;
-  }
-
-  &__label {
-    border-radius: 50%;
+  &--visible {
     display: block;
-    padding: 25px;
-    background-color: $color-7;
-    transition: background-color 0.3s;
-    cursor: pointer;
+    z-index: 1005;
+    height: 100%;
+    width: 100%;
+  }
 
-    &:focus {
-      background-color: #50a4d1;
-    }
+  &__submit-btn,
+  &__reset-btn {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    &:hover {
-      background-color: $color-3;
-    }
+  &__submit-btn{
+    left: 35px;
+  }
 
-    &:active {
-      background-color: $user-interact-active;
-    }
-
-&:active .icon {
-      @extend %icon-active-effect;
-    }
-
-    &:focus .icon {
-      @extend %icon-focus-effect;
-    }
-
-    &:hover .icon {
-      @extend %icon-hover-effect;
-    }
+  &__reset-btn{
+    right: 35px;
   }
 
   &__input {
-    opacity: 0;
     border-radius: 30px;
-    padding: 14px;
-    position: absolute;
-    transform: translateX(-100%);
-    left: -10px;
-    top: 0;
+    padding: 14px 50px;
     border: 1px solid $color-7;
     transition: opacity 0.3s, border-color 0.3s;
+    float: left;
+    margin: 0 auto;
+    width: 100%;
 
     &:focus {
       border-color: $color-3;
@@ -248,6 +300,28 @@
     display: none;
   }
 }
+
+// ------------------------------------------------------------------ CANCEL BUTTON
+
+
+.search-cancel-btn {
+  display: none;
+  background-color: $bg-color-3;
+  padding: 15px;
+  color: $primary-color;
+
+  &--visible {
+    display: block;
+  }
+
+  @include max-width($xl) {
+    display: none;
+  }
+}
+
+
+//---------------------------------------------------------------------
+
 
 .search-icon,
 .cart-icon,
@@ -355,6 +429,10 @@
       background-image: url('../images/icons/apps.svg');
     }
 
+    &--hidden {
+      display: none;
+    }
+
     @include max-width($xl) {
       display: none;
     }
@@ -373,8 +451,12 @@
     text-align: center;
   }
 
+  &--hidden {
+    display: none;
+  }
+
   @include max-width($lg) {
-    
+    //display: none;
   }
 
   // @include max-width($lg) {

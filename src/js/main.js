@@ -70,6 +70,35 @@ $(function () {
       element.addEventListener('mouseover', () => element.classList.add(className));
       element.addEventListener('mouseout', () => element.classList.remove(className));
     });
+
+    const searchBtn = document.querySelector('.search-btn')
+    searchBtn.addEventListener('click', () => {
+      toggleClassesMenuItems()
+    })
+
+    const menuHideBtn = document.querySelector('.search-cancel-btn')
+    menuHideBtn.addEventListener('click', () => {
+      toggleClassesMenuItems()
+    })
+  }
+
+  function toggleClassesMenuItems() {
+    const menuListClassName = 'menu__list'
+    const appsButtonClassName = 'user-nav__apps'
+    const userNavClassName = 'user-nav'
+    const searchCancelBtnClassName = 'search-cancel-btn'
+    
+    const searchForm = document.querySelector('.search-form')
+    const menuWrapper = document.querySelector(`.${menuListClassName}`)
+    const appsButton = document.querySelector(`.${appsButtonClassName}`)
+    const userNavWrapper = document.querySelector(`.${userNavClassName}`)
+    const searchCancelBtn = document.querySelector(`.${searchCancelBtnClassName}`)
+
+    searchForm.classList.toggle("search-form--visible")
+    menuWrapper.classList.toggle(`${menuListClassName}--hidden`)
+    appsButton.classList.toggle(`${appsButtonClassName}--hidden`)
+    userNavWrapper.classList.toggle(`${userNavClassName}--hidden`)
+    searchCancelBtn.classList.toggle(`${searchCancelBtnClassName}--visible`)
   }
 
   function menu() {
