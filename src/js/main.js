@@ -1,19 +1,24 @@
 $(function () {
 
-  configureSlider('.product-slider');
-
-  configurePartnersSlider('.partners-slider');
+  configureProductSlider();
+  configurePartnersSlider();
 
   configureFilter('.products-of-week')
-
   configureFilter('.new-design')
 
-  subscribeToEvents();
+  productsOfWeekEvents()
 
-  menu();
+  closeSearchForm()
 
-  function configureSlider(selector) {
-    $(selector).slick({
+  menuBtnClickHandler()
+  menuLinksClickHandler()
+
+  openSearchForm()
+
+  resize()
+
+  function configureProductSlider() {
+    $('.product-slider').slick({
       autoplay: true,
       arrows: false,
       fade: true,
@@ -21,26 +26,28 @@ $(function () {
     });
   }
 
-  window.addEventListener("resize", () => slickSetOption('.partners-slider'), true);
+  function configurePartnersSlider() {
+    let countSlidesToShow = getCountOfPartnersSlidesToShow()
 
-  function configurePartnersSlider(selector) {
-    let slidesToShow = getPartnersSlidesToShow()
-
-    $(selector).slick({
+    $('.partners-slider').slick({
       infinite: true,
       autoplay: true,
       arrows: false,
       dots: false,
-      slidesToShow: slidesToShow,
+      slidesToShow:  countSlidesToShow,
       slidesToScroll: 1,
     });
   }
 
-  function slickSetOption(selector) {
-    $(selector).slick('slickSetOption', 'slidesToShow', getPartnersSlidesToShow());
+  function resize() {
+    window.addEventListener(
+      "resize", () => {
+        const countSlidesToShow = getCountOfPartnersSlidesToShow()
+        $('.partners-slider').slick('slickSetOption', 'slidesToShow', countSlidesToShow);
+      }, true);
   }
 
-  function getPartnersSlidesToShow() {
+  function getCountOfPartnersSlidesToShow() {
     return window.innerWidth < 768
       ? 1
       : window.innerWidth < 1200
@@ -61,21 +68,24 @@ $(function () {
     mixitup(selector, config)
   }
 
-  function subscribeToEvents() {
+  function productsOfWeekEvents() {
     const productsOfWeek = document.getElementsByClassName('products-gallery__item')
-
     Array.prototype.forEach.call(productsOfWeek, element => {
       const className = 'products-gallery__item--active'
 
       element.addEventListener('mouseover', () => element.classList.add(className));
       element.addEventListener('mouseout', () => element.classList.remove(className));
     });
+  }
 
+  function openSearchForm() {
     const searchBtn = document.querySelector('.search-btn')
     searchBtn.addEventListener('click', () => {
       toggleClassesMenuItems()
-    })
+    }) 
+  }
 
+  function closeSearchForm() {
     const menuHideBtn = document.querySelector('.search-cancel-btn')
     menuHideBtn.addEventListener('click', () => {
       toggleClassesMenuItems()
@@ -101,7 +111,7 @@ $(function () {
     searchCancelBtn.classList.toggle(`${searchCancelBtnClassName}--visible`)
   }
 
-  function menu() {
+  function menuBtnClickHandler() {
     const menuBtn = document.querySelector('.menu__btn')
 
     if (menuBtn) {
@@ -109,6 +119,19 @@ $(function () {
         toggleBodyLock()
         toggleMenuBtnActive()
         toggleMenuListActive()
+      })
+    }
+  }
+
+  function menuLinksClickHandler() {
+    const menuLinks = document.querySelectorAll('.menu__link')
+    if (menuLinks && menuLinks.length > 1) {
+      menuLinks.forEach(menuLink => {
+        menuLink.addEventListener('click', function () {
+          toggleBodyLock()
+          toggleMenuBtnActive()
+          toggleMenuListActive()
+        })
       })
     }
   }
@@ -129,17 +152,6 @@ $(function () {
     if (menuList) {
       menuList.classList.toggle('menu__list--active')
     }
-  }
-
-  const menuLinks = document.querySelectorAll('.menu__link')
-  if (menuLinks && menuLinks.length > 1) {
-    menuLinks.forEach(menuLink => {
-      menuLink.addEventListener('click', function () {
-        toggleBodyLock()
-        toggleMenuBtnActive()
-        toggleMenuListActive()
-      })
-    })
   }
 })
 
